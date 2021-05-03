@@ -1,32 +1,80 @@
-async function soldProduct() {
+fetch("http://localhost:3000/api/cameras")
+.then(function(res) {
+  if (res.ok) {
+    return res.json();
+  }
+})
+.then(function(data) {
+  console.log(data);
 
-    let response = await fetch("http://localhost:3000/api/cameras");
-    let cameras = await response.json();
+  var temp1 = document.getElementById("sample").content
+  
+  for (let i = 0; i < data.length; i++){
+    document.getElementById("sample")
+    var copyHTML = document.importNode(temp1,true);
+    document.getElementById("contentContainer").appendChild(copyHTML);
+  
+  }
+})
+.catch(function(err) {
+  
+});
 
-    for (let i = 0; i < cameras.length; i++) {
 
-        document.querySelector("section").innerHTML +=
-            `  <div class="container">
-        <div class="name">
-        <h3>${cameras[i].name}</h3>
-      </div>
-      <div class="lenses">
-        <p>${cameras[i].lenses}</p>
-      </div>
-      <div class="id">
-        <p>${cameras[i]._id}</p>
-      </div>
+
+
+
+
+
+
+
+
+
+// async function soldProduct() {
+
+//     let response = await fetch("http://localhost:3000/api/cameras");
+
+
+//     let cameras = [];
+//     cameras = response.json();
+
     
-      <div class="price">
-        <p>${cameras[i].price}</p>
-      </div>
-      <div class="description">
-        <p>${cameras[i].description}</p>
-      </div>
-      <div class="imageUrl">
-        <img src="${cameras[i].imageUrl}" alt="vcamOne" />
-      </div> 
-      </div>      `;
-}}
 
-soldProduct()
+//     cameras.forEach(camera => {
+
+//       // const formattedPrice = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(camera.price/100);
+
+//       document.querySelector("section").innerHTML +=
+//       `  <a href = "product.html">
+//       <div class="container">
+//         <div class="name">
+//           <h3>${camera.name}</h3>
+//         </div>
+//         <div class="imageUrl">
+//         <img src="${camera.imageUrl}" alt="vcam" />
+//       </div>
+//         <div class="price">
+//           <p>Prix : ${camera.price/100} €</p>
+//         </div>
+//        </div></a> `
+      
+//     })   
+
+
+      
+//     }    
+
+// soldProduct()
+
+// /<div class="description">
+//           <p>${camera.description}</p>
+//         </div>
+//         <div class="id">
+//         <p>Ref : ${camera._id}</p>
+//       </div>
+//       <div class="lenses">
+//       <p>Lentilles : ${camera.lenses}</p>
+//     </div> 
+
+
+

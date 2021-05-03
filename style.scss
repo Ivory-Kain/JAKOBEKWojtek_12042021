@@ -1,0 +1,116 @@
+header{
+    background-color: #F4E9F2;  
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    #logo{
+        width: 200px;
+        padding-left: 30px;
+
+    }
+
+    .basket{
+        padding-right: 30px;
+    }
+
+    
+}
+
+main{display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+
+
+    #product {
+      
+        border: red solid 1px;
+        background-color: gray;
+
+    
+
+        .container{
+            display: flex;
+            
+            flex-wrap: wrap;
+            background-color: white;
+            width: 400px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-between;
+            align-items: center;
+
+        
+        
+    
+        .name{
+    
+        }
+    
+        .lenses{
+    
+        }
+    
+        .id{
+    
+        }
+    
+        .price{
+    
+        }
+    
+        .description{
+    
+        }
+    
+        .imageUrl{
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+    
+            }
+        }
+    }
+}
+
+}
+
+footer{
+    background-color: #F4E9F2;  
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    .about h4{
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
