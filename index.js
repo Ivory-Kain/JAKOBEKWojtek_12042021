@@ -26,6 +26,8 @@ fetch("http://localhost:3000/api/cameras")
     copyHTML.querySelector(".name h3").textContent =  data[i].name;
     copyHTML.querySelector(".imageUrl img").src =  data[i].imageUrl ;
     copyHTML.querySelector(".product").setAttribute("href","product.html?id="+ data[i]._id );
+    
+    
 
     // prix formater " prix en centimes moins 2 caractères, plus "." plus 2 caractères"
     copyHTML.querySelector(".price span").textContent =   a.substring(0, a.length-2) + "." + a.substring(a.length-2, a.length) + ' €'
@@ -33,6 +35,8 @@ fetch("http://localhost:3000/api/cameras")
     
     // Injecter les modification dans le HTML
     document.getElementById("contentContainer").appendChild(copyHTML);
+
+   
   
     
   }
@@ -43,6 +47,8 @@ fetch("http://localhost:3000/api/cameras")
 .catch(function(err) {
   
 });
+
+
 
 
 
