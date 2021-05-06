@@ -6,21 +6,28 @@ console.log(storageData);
 var obj = JSON.parse(storageData);
 console.log(obj)
 
-// Variale "template = ID sample  "
-var template = document.getElementById("sample").content
 
-// Variable "copyHTML = template"
-    var copyHTML = document.importNode(template,true);
+ // Variale "template = ID sample  "
+ var template = document.getElementById("sample").content
+
 
 // Variable "L'ensemble des caractère de obj.price est transformer en string"    
-    var a = obj.price.toString() 
 
-// querySelector "remplissage de la cible"    
-copyHTML.querySelector(".name h3").textContent = obj.name;
-copyHTML.querySelector(".imageUrl img").src = obj.image;
-copyHTML.querySelector(".description span").textContent = obj.description;
-copyHTML.querySelector(".lenses span").textContent = obj.lenses;
-copyHTML.querySelector(".id span").textContent = obj.id;
+for (let i = 0; i < obj.length; i++) {
+    
+    var a = obj[i].price.toString() 
+
+   
+
+    // Variable "copyHTML = template"
+    var copyHTML = document.importNode(template,true);
+
+    // querySelector "remplissage de la cible"    
+copyHTML.querySelector(".name h3").textContent = obj[i].name;
+copyHTML.querySelector(".imageUrl img").src = obj[i].image;
+copyHTML.querySelector(".description span").textContent = obj[i].description;
+copyHTML.querySelector(".lenses span").textContent = obj[i].lenses;
+copyHTML.querySelector(".id span").textContent = obj[i].id;
 
 
 
@@ -29,3 +36,13 @@ copyHTML.querySelector(".price span").textContent =  a.substring(0, a.length-2) 
 
 // Injecter les modification dans le HTML
 document.getElementById("contentContainer").appendChild(copyHTML);
+}
+   
+    
+
+
+
+
+
+ 
+

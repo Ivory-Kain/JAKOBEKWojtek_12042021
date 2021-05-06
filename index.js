@@ -23,7 +23,7 @@ fetch("http://localhost:3000/api/cameras")
 
     
     // querySelector "remplissage de la cible par le résultat donné data[i]"
-    copyHTML.querySelector(".name h3").textContent =  data[i].name;
+    copyHTML.querySelector(".name h5").textContent =  data[i].name;
     copyHTML.querySelector(".imageUrl img").src =  data[i].imageUrl ;
     copyHTML.querySelector(".product").setAttribute("href","product.html?id="+ data[i]._id );
     

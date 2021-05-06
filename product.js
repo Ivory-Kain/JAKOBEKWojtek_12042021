@@ -51,11 +51,29 @@ fetch("http://localhost:3000/api/cameras/"+ productId)
 
   }
 
+  var pickArray = [] 
+  
+  
   //ecouteur d'evenement(click) sur le bouton 
-    document.querySelector("#btn").addEventListener("click", function(){  
+    document.querySelector("#btn").addEventListener("click", function(){   
+      
+      // verifie s'il y a un element ("oricaddy") dans localStorage
+      if(localStorage.getItem("oricaddy") !== null){
+
+        // Remplace le tableau [pickArray] par l'element ("oricaddy") modifié en tableau via JSON.parse
+        pickArray = JSON.parse(localStorage.getItem("oricaddy"));
+
+        // Ajouter productObject dans le tableau [pickArray]
+        pickArray.push(productObject)
+        console.log(pickArray);
+      }else{
+        // si la condition de if n'est pas remplis alors on ajoute un produit au tableau vide [pickArray] 
+        pickArray.push(productObject)
+      }
+      
 
   // envoi des infos vers le localStorage de productObject au format "string"(json.stringify())======> localStorage n'accepte que le type "string"
-    localStorage.setItem("oricaddy", JSON.stringify(productObject) )
+    localStorage.setItem("oricaddy", JSON.stringify(pickArray) )
 })
 })
 

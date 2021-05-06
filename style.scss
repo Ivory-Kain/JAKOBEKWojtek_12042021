@@ -1,5 +1,5 @@
 header{
-    background-color: #F4E9F2;  
+    background-color:#010302;  
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -16,75 +16,44 @@ header{
     .basket{
         padding-right: 30px;
     }
+           
+ 
+    .btnBasket:hover{
+        box-shadow: 0 0 10px 1px  white;
+    }
+
+
+    a{
+        color: white;
+        text-decoration: none;       
+        
+            &:hover{
+                color: white;
+                text-decoration: none;                
+                border: white;
+}
+    }
+        
+        
+    
+   
 
     
 }
 
-main{display: flex;
+main{
+    
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
    
 
 
-    #product {
-      
-        border: red solid 1px;
-        background-color: gray;
-
-    
-
-        .container{
-            display: flex;
-            
-            flex-wrap: wrap;
-            background-color: white;
-            width: 400px;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: space-between;
-            align-items: center;
-
-        
-        
-    
-        .name{
-    
-        } 
-    
-        .lenses{
-    
-        }
-    
-        .id{
-    
-        }
-    
-        .price{
-    
-        }
-    
-        .description{
-    
-        }
-    
-        .imageUrl{
-            display: flex;
-            justify-content: center;
-
-            img{
-                width: 300px;
-                height: auto;
-                object-fit: contain;
-    
-            }
-        }
-    }
-}
 
 }
 
 footer{
-    background-color: #F4E9F2;  
+    background-color:#010302;   
     display: flex;
     flex-wrap: nowrap;
     align-content: center;

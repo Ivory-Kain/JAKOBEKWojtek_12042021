@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Orinoco</title>
   </head>
   <body>
@@ -14,40 +20,39 @@
         <img src="\images\logo.webp" alt="logo" id="logo" />
       </div>
       <nav class="basket">
-        <button id="panier" type="button" name="panier" aria-label="panier">
-          <a href="basket.html"> Panier</a>
+        <button type="button" class="btn btnBasket">
+          <a href="basket.html">Panier</a>
+          <span class="badge badge-light">9</span>
         </button>
       </nav>
     </header>
 
     <main>
-      <div id="product">
-        <h2>Caméras vintage</h2>
+      <div id="product ">
+        <h2 class="text-white">Caméras vintage</h2>
 
         <section id="contentContainer"></section>
       </div>
       <template id="sample">
         <div class="container">
-          <div class="imageUrl">
-            <img src="" alt="vcam" />
+          <div
+            class="card bg-transparent text-white imageUrl"
+            style="width: 18rem"
+          >
+            <img src="" class="card-img-top img-fluid" alt="vcam" />
+            <div class="card-body name">
+              <h5 class="card-title"></h5>
+              <p class="card-text price">Prix : <span> </span></p>
+              <a href="product.html" class="btn btn-primary product">Détails</a>
+            </div>
           </div>
-          <div class="name">
-            <h3></h3>
-          </div>
-
-          <div class="price">
-            <p>Prix : <span> </span></p>
-          </div>
-          <a class="product" href="product.html">
-            <button id="details">Détails</button>
-          </a>
         </div>
       </template>
     </main>
 
     <footer>
       <div class="about">
-        <h4>Mieux nous connaitre</h4>
+        <h4 class="text-white">Mieux nous connaitre</h4>
         <ul>
           <li><a href="#">A propos</a></li>
           <li><a href="#">Recrutement</a></li>
@@ -55,7 +60,7 @@
         </ul>
       </div>
       <div class="payment">
-        <h4>Moyens de paiement</h4>
+        <h4 class="text-white">Moyens de paiement</h4>
         <ul>
           <li><a href="#">Carte de paiement</a></li>
           <li><a href="#">Paypal</a></li>
@@ -63,7 +68,7 @@
         </ul>
       </div>
       <div class="help">
-        <h4>Besoin d'aide ?</h4>
+        <h4 class="text-white">Besoin d'aide ?</h4>
         <ul>
           <li><a href="#">Service Client</a></li>
           <li><a href="#">Contact Professionnels</a></li>
@@ -71,7 +76,7 @@
         </ul>
       </div>
       <div class="info">
-        <h4>Information légales</h4>
+        <h4 class="text-white">Information légales</h4>
         <ul>
           <li><a href="#">Conditions générales de vente</a></li>
           <li>
@@ -81,6 +86,16 @@
         </ul>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
