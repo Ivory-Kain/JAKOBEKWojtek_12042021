@@ -11,16 +11,22 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Orinoco</title>
   </head>
+
   <body>
+    <div class="backgroundImage"></div>
     <header>
       <div class="logo">
         <img src="\images\logo.webp" alt="logo" id="logo" />
       </div>
       <nav class="basket">
-        <button type="button" class="btn btnBasket">
+        <button type="button" class="btn btnBasket btn-lg rounded-pill">
           <a href="basket.html">Panier</a>
           <span class="badge badge-light">9</span>
         </button>
@@ -31,19 +37,21 @@
       <div id="product ">
         <h2 class="text-white">Caméras vintage</h2>
 
-        <section id="contentContainer"></section>
+        <section id="contentContainer" class="row row-cols-2"></section>
       </div>
       <template id="sample">
-        <div class="container">
+        <div class="container col g-6">
           <div
-            class="card bg-transparent text-white imageUrl"
-            style="width: 18rem"
+            class="card bg-transparent text-white imageUrl mx-auto"
+            style="width: 25rem"
           >
-            <img src="" class="card-img-top img-fluid" alt="vcam" />
+            <img src="" class="card-img-top" alt="vcam" />
             <div class="card-body name">
               <h5 class="card-title"></h5>
-              <p class="card-text price">Prix : <span> </span></p>
-              <a href="product.html" class="btn btn-primary product">Détails</a>
+              <p class="card-text price">Prix <span></span></p>
+              <a href="product.html" class="text-white product"
+                ><i class="bi bi-info-circle"></i>Détails</a
+              >
             </div>
           </div>
         </div>
