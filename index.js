@@ -19,18 +19,18 @@ fetch("http://localhost:3000/api/cameras")
     var copyHTML = document.importNode(template,true);
 
     // Variable "L'ensemble des caractère de data[i].price est transformer en string"
-    var a = data[i].price.toString()  
+    var modifiedPrice = data[i].price.toString()  
 
     
     // querySelector "remplissage de la cible par le résultat donné data[i]"
-    copyHTML.querySelector(".name h5").textContent =  data[i].name;
+    copyHTML.querySelector(".name h2").textContent =  data[i].name;
     copyHTML.querySelector(".imageUrl img").src =  data[i].imageUrl ;
     copyHTML.querySelector(".product").setAttribute("href","product.html?id="+ data[i]._id );
     
     
 
     // prix formater " prix en centimes moins 2 caractères, plus "." plus 2 caractères"
-    copyHTML.querySelector(".price span").textContent =   a.substring(0, a.length-2) + "." + a.substring(a.length-2, a.length) + ' €'
+    copyHTML.querySelector(".price span").textContent =   modifiedPrice.substring(0, modifiedPrice.length-2) + "." + modifiedPrice.substring(modifiedPrice.length-2, modifiedPrice.length) + ' €'
     
     
     // Injecter les modification dans le HTML

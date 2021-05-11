@@ -21,10 +21,12 @@
     </header>
     <main>
       <section id="contentContainer"></section>
+
+      <!-- Le template produit -->
       <template id="sample">
         <div class="container">
           <div class="name">
-            <h3></h3>
+            <h5></h5>
           </div>
           <div class="imageUrl">
             <img src="" alt="vcam" />
@@ -46,14 +48,17 @@
         </div>
         <form>
           <label for="option_produit">Choix de lentilles</label>
-          <select name="option_produit" id="option_produit">
-            <option value="valeur_0" selected>--Votre choix--</option>
-            <option value="option_1">option_1</option>
-            <option value="option_2">option_2</option>
+          <select name="option_produit" id="optionProduct" required>
+            <option value="valeur_0" disabled selected value>
+              --Votre choix--
+            </option>
           </select>
         </form>
-        <button id="btn" name="btn">Commander</button>
+        <button disabled id="btn" name="btn">Commander</button>
       </template>
+
+      <!-- template option -->
+      <template id="lenses"><option value="option"></option></template>
     </main>
     <footer>
       <div class="about">

@@ -63,6 +63,10 @@ main{
     z-index: 500;
     padding: 50px;
 
+    h1{
+        margin-bottom: 40px;
+    }
+
    
    .container{
        padding-bottom: 20px;
@@ -121,10 +125,27 @@ footer{
     align-content: center;
     justify-content: space-evenly;
     align-items: flex-start;
-    .about h4{
 
+    .socialIcon{
 
+        ul{
+
+            li{
+                display: inline-block;
+                width: 1.2em;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.5);
+                    background: rgb(200,124,26);
+                    background: linear-gradient(90deg, rgba(200,124,26,1) 0%, rgba(141,91,251,1) 100%);
+                    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+                  }
+            }
+        }
     }
+   
 
 
 }

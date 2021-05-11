@@ -47,6 +47,9 @@ main {
   z-index: 500;
   padding: 50px;
 }
+main h1 {
+  margin-bottom: 40px;
+}
 main .container {
   padding-bottom: 20px;
 }
@@ -83,6 +86,18 @@ footer {
   align-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
+}
+footer .socialIcon ul li {
+  display: inline-block;
+  width: 1.2em;
+  transition: all 0.2s ease-in-out;
+}
+footer .socialIcon ul li:hover {
+  transform: scale(1.5);
+  background: #c87c1a;
+  background: linear-gradient(90deg, #c87c1a 0%, #8d5bfb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
