@@ -1,0 +1,15 @@
+ <div class="metersInputGroup">
+        <label for="meters">Saisir votre taille — en mètres :</label>
+        <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required>
+        <span class="validity"></span>
+    </div>
+
+    <div>
+        <input type="submit" value="Envoyer">
+    </div>
+
+    var metersInputGroup = document.querySelector('.metersInputGroup');
+    var metersInput = document.querySelector('#meters');
+    var switchBtn = document.querySelector('input[type="button"]');
+
+    

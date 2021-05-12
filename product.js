@@ -46,10 +46,7 @@ fetch("http://localhost:3000/api/cameras/" + productId)
     document.getElementById("contentContainer").appendChild(copyHTML);
 
     // remplissage des choix de lentilles
-    //  ==> 1 ==> faire un template en html ==> Done
-
-    //  ==> 2 ==> faire une boucle sur la longueur du tableau "lenses"
-
+    
     var tempLenses = document.getElementById("lenses").content
 
     for (let i = 0; i < data.lenses.length; i++) {
@@ -61,16 +58,35 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 
     var select = document.querySelector("select")
 
+    console.log(select);
+
+    // up add 12/05
+    var quantity = document.querySelector("input") 
+
+    console.log(quantity);
+    // down add 12/05
+
+   
+
     select.addEventListener("change", function () {
 
       if (select.selectedIndex > 0) {
 
 
-        document.querySelector("#btn").removeAttribute("disabled")
+        document.querySelector("#btn").removeAttribute("disabled");
 
       }
+      // // up add 12/05
+      // if (quantity.selectedIndex > 0){
+      //   document.querySelector("#btn").removeAttribute("disabled")
+      // }
+      // down add 12/05
+
+
 
     })
+
+    
 
     // Variable objet contenant les valeurs d'un produit 
 
@@ -81,7 +97,9 @@ fetch("http://localhost:3000/api/cameras/" + productId)
       id: data._id,
       lenses: data.lenses,
       price: data.price,
+      // up add 12/05
       // quantity:""
+       // down add 12/05
 
     }
 
@@ -89,7 +107,9 @@ fetch("http://localhost:3000/api/cameras/" + productId)
     document.querySelector("#btn").addEventListener("click", function () {
 
       productObject.lenses = select.value
-      // productObject.quantity = select.value
+      // up add 12/05
+      // productObject.quantity = input.value
+       // down add 12/05
 
       var pickArray = []
 

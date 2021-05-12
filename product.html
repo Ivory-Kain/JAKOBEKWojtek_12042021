@@ -5,18 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../normalize.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" href="product.css" />
     <title>Produit</title>
   </head>
   <body>
+    <div class="backgroundImage"></div>
     <header>
       <div class="logo">
         <img src="\images\logo.webp" alt="logo" id="logo" />
       </div>
       <nav class="basket">
-        <button id="panier" type="button" name="panier" aria-label="panier">
-          <a href="basket.html"> Panier</a>
-        </button>
+        <button type="button" class="btn btnBasket btn-lg rounded-pill">
+          <a href="basket.html">Panier</a>
+          <span class="badge badge-light">9</span></button
+        >s
       </nav>
     </header>
     <main>
@@ -54,11 +66,25 @@
             </option>
           </select>
         </form>
-        <button disabled id="btn" name="btn">Commander</button>
+        <form>
+          <div class="quantity">
+            <label for="cameras">Quantité à commander:</label>
+            <input
+              type="number"
+              id="cameras"
+              name="cameras"
+              min="1"
+              step="1"
+              placeholder="--Votre choix--"
+              required
+            />
+            <button disabled id="btn" name="btn">Ajouter au panier</button>
+          </div>
+        </form>
       </template>
 
       <!-- template option -->
-      <template id="lenses"><option value="option"></option></template>
+      <template id="lenses"><option value="option"></option> </template>
     </main>
     <footer>
       <div class="about">
