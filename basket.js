@@ -7,6 +7,9 @@ var myNewObject = JSON.parse(storageData);
 console.log(myNewObject)
 
 
+
+
+
  // Variale "template = ID sample  "
  var template = document.getElementById("sample").content
 
@@ -39,6 +42,26 @@ copyHTML.querySelector(".price span").textContent =   modifiedPrice.substring(0,
 document.getElementById("contentContainer").appendChild(copyHTML);
 }
    
+var quantity = document.querySelectorAll(".userChoice")
+var validate = document.querySelectorAll(".userModifiedChoice")
+
+console.log(quantity);
+
+
+for (let i = 0; i < validate.length; i++) {
+
+    
+    
+    validate[i].addEventListener("click", function () {
+        if (quantity[i].value > 0){
+            document.querySelector(".quantity span").textContent = quantity[i].value
+        }
+        
+          })
+    
+    
+}
+
     
 
 
