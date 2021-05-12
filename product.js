@@ -46,7 +46,7 @@ fetch("http://localhost:3000/api/cameras/" + productId)
     document.getElementById("contentContainer").appendChild(copyHTML);
 
     // remplissage des choix de lentilles
-    
+
     var tempLenses = document.getElementById("lenses").content
 
     for (let i = 0; i < data.lenses.length; i++) {
@@ -57,36 +57,33 @@ fetch("http://localhost:3000/api/cameras/" + productId)
     }
 
     var select = document.querySelector("select")
+    var quantity = document.querySelector("input")
 
-    console.log(select);
+    function choice() {
 
-    // up add 12/05
-    var quantity = document.querySelector("input") 
-
-    console.log(quantity);
-    // down add 12/05
-
-   
-
-    select.addEventListener("change", function () {
-
-      if (select.selectedIndex > 0) {
+      if (select.selectedIndex > 0 && quantity.value > 0) {
 
 
         document.querySelector("#btn").removeAttribute("disabled");
 
       }
-      // // up add 12/05
-      // if (quantity.selectedIndex > 0){
-      //   document.querySelector("#btn").removeAttribute("disabled")
-      // }
-      // down add 12/05
 
 
 
+    }
+
+
+    select.addEventListener("change", function () {
+
+      choice()
     })
 
-    
+    quantity.addEventListener("change", function () {
+
+      choice()
+    })
+
+
 
     // Variable objet contenant les valeurs d'un produit 
 
@@ -96,20 +93,18 @@ fetch("http://localhost:3000/api/cameras/" + productId)
       description: data.description,
       id: data._id,
       lenses: data.lenses,
-      price: data.price,
-      // up add 12/05
-      // quantity:""
-       // down add 12/05
+      price: data.price,      
+      quantity: quantity.value
+      
 
     }
 
     //ecouteur d'evenement(click) sur le bouton 
     document.querySelector("#btn").addEventListener("click", function () {
 
-      productObject.lenses = select.value
-      // up add 12/05
-      // productObject.quantity = input.value
-       // down add 12/05
+      productObject.lenses = select.value     
+      productObject.quantity = quantity.value
+      
 
       var pickArray = []
 

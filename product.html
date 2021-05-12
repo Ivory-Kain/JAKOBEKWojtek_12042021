@@ -27,8 +27,8 @@
       <nav class="basket">
         <button type="button" class="btn btnBasket btn-lg rounded-pill">
           <a href="basket.html">Panier</a>
-          <span class="badge badge-light">9</span></button
-        >s
+          <span class="badge badge-light">9</span>
+        </button>
       </nav>
     </header>
     <main>
@@ -59,8 +59,13 @@
           </div>
         </div>
         <form>
-          <label for="option_produit">Choix de lentilles</label>
-          <select name="option_produit" id="optionProduct" required>
+          <label for="optionProduit">Choix de lentilles</label>
+          <select
+            class="userChoice"
+            name="optionProduit"
+            id="optionProduct"
+            required
+          >
             <option value="valeur_0" disabled selected value>
               --Votre choix--
             </option>
@@ -70,6 +75,7 @@
           <div class="quantity">
             <label for="cameras">Quantité à commander:</label>
             <input
+              class="userChoice"
               type="number"
               id="cameras"
               name="cameras"
@@ -78,9 +84,9 @@
               placeholder="--Votre choix--"
               required
             />
-            <button disabled id="btn" name="btn">Ajouter au panier</button>
           </div>
         </form>
+        <button disabled id="btn" name="btn">Ajouter au panier</button>
       </template>
 
       <!-- template option -->

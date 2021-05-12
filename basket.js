@@ -28,6 +28,7 @@ copyHTML.querySelector(".imageUrl img").src = myNewObject[i].image;
 copyHTML.querySelector(".description span").textContent = myNewObject[i].description;
 copyHTML.querySelector(".lenses span").textContent = myNewObject[i].lenses;
 copyHTML.querySelector(".id span").textContent = myNewObject[i].id;
+copyHTML.querySelector(".quantity span").textContent = myNewObject[i].quantity;
 
 
 
