@@ -27,7 +27,7 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 
     // querySelector "remplissage de la cible"
 
-    copyHTML.querySelector(".name h5").textContent = data.name;
+    copyHTML.querySelector(".name h2").textContent = data.name;
     copyHTML.querySelector(".imageUrl img").src = data.imageUrl;
     copyHTML.querySelector(".description span").textContent = data.description;
     copyHTML.querySelector(".id span").textContent = data._id;
