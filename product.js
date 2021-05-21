@@ -75,4 +75,8 @@ fetch("http://localhost:3000/api/cameras/" + id)
     .catch(function (err) {
     });
 
-    document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
+    if (localStorage.getItem('oricaddy') !== null) {
+        document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
+      }else{
+        document.querySelector(".badge").style.display = "none"
+      }

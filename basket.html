@@ -30,48 +30,55 @@
       <template id="sample">
         <div class="container text-white">
           <div class="name">
-            <h5></h5>
+            <h2></h2>
           </div>
           <div class="imageUrl">
             <img src="" alt="vcam" />
           </div>
           <div class="price">
-            <p>Prix Unitaire : <span></span></p>
+            <p>Prix : <span></span></p>
           </div>
-
           <div class="description">
             <p>Description : <span></span></p>
           </div>
-
           <div class="lenses">
             <p>Lentilles : <span></span></p>
           </div>
           <div class="id">
             <p>Ref : <span></span></p>
           </div>
-          <div class="quantity">
-            <p>Quantité à commander : <span></span></p>
-          </div>
-
-          <div class="quantityModify">
-            <label for="cameras">Modifier votre quantité</label>
-            <input
-              class="userChoice"
-              type="number"
-              id="cameras"
-              name="cameras"
-              min="1"
-              step="1"
-              placeholder="--Votre choix--"
-              required
-            />
-            <button class="userModifiedChoice">Modifier</button>
-          </div>
-          <div class="subtotal">
-            <p></p>
-          </div>
+          <button class="remove">Supprimer l'article</button>
         </div>
       </template>
+      <button class="removeAll">Vider le panier</button>
+      <div class="total text-white">
+        <p>Prix total de la commande : <span></span></p>
+      </div>
+      <form class="form text-white">
+        <ul>
+          <li class="firstName">
+            <label for="firstName">Nom : </label>
+            <input required type="text" id="firstName" name="user_firstName" />
+          </li>
+          <li class="lastName">
+            <label for="lastName">Prénom : </label>
+            <input required type="text" id="lastName" name="user_lastName" />
+          </li>
+          <li class="address">
+            <label for="address">Adresse : </label>
+            <input required type="text" id="address" name="user_address" />
+          </li>
+          <li class="city">
+            <label for="city">Ville : </label>
+            <input required type="text" id="city" name="user_city" />
+          </li>
+          <li class="email">
+            <label for="email">E-mail : </label>
+            <input required type="email" id="email" name="user_email" />
+          </li>
+        </ul>
+        <button class="validate">Valider votre panier</button>
+      </form>
     </main>
     <footer class="text-white">
       <div class="about">
