@@ -29,6 +29,7 @@ fetch("http://localhost:3000/api/cameras/" + id)
         document.getElementById("contentContainer").appendChild(copyHTML);
 
         var tempLenses = document.getElementById("lenses").content
+        console.log(tempLenses);
 
         for (let i = 0; i < data.lenses.length; i++) {
             var copyLenses = document.importNode(tempLenses, true);
@@ -58,10 +59,15 @@ fetch("http://localhost:3000/api/cameras/" + id)
         var pickArray = []
 
         button.addEventListener("click", function () {
+            itemDetails.lenses = select.value
+            
             if (localStorage.getItem('oricaddy') !== null) {
                 pickArray = JSON.parse(localStorage.getItem('oricaddy'));
+
                 const thisId = pickArray.findIndex(element => element.name === data.name );
-                    if (thisId < 0){
+                const thisLenses = pickArray.findIndex(element => element.lenses === data.lenses );
+
+                    if (thisId < 0 || thisLenses < 0){
                         pickArray.push(itemDetails)     
                     }            
             } else {
@@ -80,3 +86,7 @@ fetch("http://localhost:3000/api/cameras/" + id)
       }else{
         document.querySelector(".badge").style.display = "none"
       }
+
+
+
+      
