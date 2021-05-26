@@ -2,7 +2,8 @@
   background-image: url("/images/backgroundImage.webp");
   background-size: cover;
   background-position: center;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -13,7 +14,8 @@
 
 header {
   background-color: transparent;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -56,13 +58,15 @@ main .container {
 main .container img {
   height: 265px;
   width: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .container .card {
   border: none;
 }
 main .container .card .card-body {
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
 main .container a {
@@ -80,7 +84,8 @@ main .container a i {
 
 footer {
   background-color: transparent;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   align-content: center;
@@ -98,6 +103,4 @@ footer .socialIcon ul li:hover {
   background: linear-gradient(90deg, #c87c1a 0%, #8d5bfb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/*# sourceMappingURL=basket.css.map */
+}/*# sourceMappingURL=basket.css.map */

@@ -25,6 +25,7 @@ if (storageData !== null && storageData.length) {
 
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         var reduc = priceTotal.reduce(reducer).toString()
+        console.log(reduc);
         document.querySelector('.total span').textContent = reduc.substring(0, reduc.length - 2) + "." + reduc.substring(reduc.length - 2, reduc.length) + ' €'
 
         var buttonDeletItem = document.querySelectorAll(".remove")
@@ -47,15 +48,20 @@ if (storageData !== null && storageData.length) {
 } else {
     document.querySelector(".removeAll").style.display = "none"
     document.querySelector(".form").style.display = "none"
-    document.querySelector(".total").innerHTML = "Votre panier est vide"
+    document.querySelector(".total").innerHTML = "Votre panier est vide pour le moment"
     localStorage.removeItem("oricaddy")
 }
+
+
 document.querySelector('form').addEventListener("submit", function (e) {
     e.preventDefault()
+
     var products = [];
 
     for (let i = 0; i < storageData.length; i++) {
         products.push(storageData[i].id);
+
+
 
         var userData = {
             "contact": {
@@ -63,23 +69,34 @@ document.querySelector('form').addEventListener("submit", function (e) {
                 "lastName": document.querySelector("#lastName").value,
                 "address": document.querySelector("#address").value,
                 "city": document.querySelector("#city").value,
-                "email": document.querySelector("#email").value
+                "email": document.querySelector("#email").value,
+                "total": reduc
             },
-            "products": products
+
+            "products": products,
+
+
+
+
         };
+    }
 
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        fetch('http://localhost:3000/api/cameras/order', {
+    fetch('http://localhost:3000/api/cameras/order', {
             method: "POST",
-            headers: myHeaders,
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify(userData)
         }).then(function (response) {
             return response.json();
-        }).catch(function (err) {
+        }).then(function (json) {
+            localStorage.setItem("orderId", JSON.stringify(json))
+            document.location.href = "validation.html"
+            localStorage.removeItem("oricaddy")
+
+        })
+
+        .catch(function (err) {
             console.log(err);
         });
-        
-    }
 });

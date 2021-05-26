@@ -60,16 +60,16 @@ fetch("http://localhost:3000/api/cameras/" + id)
 
         button.addEventListener("click", function () {
             itemDetails.lenses = select.value
-            
+
             if (localStorage.getItem('oricaddy') !== null) {
                 pickArray = JSON.parse(localStorage.getItem('oricaddy'));
 
-                const thisId = pickArray.findIndex(element => element.name === data.name );
-                const thisLenses = pickArray.findIndex(element => element.lenses === data.lenses );
+                const thisId = pickArray.findIndex(element => element.name === data.name);
+                const thisLenses = pickArray.findIndex(element => element.lenses === data.lenses);
 
-                    if (thisId < 0 || thisLenses < 0){
-                        pickArray.push(itemDetails)     
-                    }            
+                if (thisId < 0 || thisLenses < 0) {
+                    pickArray.push(itemDetails)
+                }
             } else {
                 pickArray.push(itemDetails)
             }
@@ -78,15 +78,10 @@ fetch("http://localhost:3000/api/cameras/" + id)
             document.location.reload();
         })
     })
-    .catch(function (err) {
-    });
+    .catch(function (err) {});
 
-    if (localStorage.getItem('oricaddy') !== null) {
-        document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
-      }else{
-        document.querySelector(".badge").style.display = "none"
-      }
-
-
-
-      
+if (localStorage.getItem('oricaddy') !== null) {
+    document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
+} else {
+    document.querySelector(".badge").style.display = "none"
+}
