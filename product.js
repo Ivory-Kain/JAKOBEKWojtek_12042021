@@ -64,8 +64,17 @@ fetch("http://localhost:3000/api/cameras/" + id)
             if (localStorage.getItem('oricaddy') !== null) {
                 pickArray = JSON.parse(localStorage.getItem('oricaddy'));
 
-                const thisId = pickArray.findIndex(element => element.name === data.name);
-                const thisLenses = pickArray.findIndex(element => element.lenses === data.lenses);
+                var elementName = function (element) {
+                    element.name === data.name
+                }
+                var thisId = pickArray.findIndex(elementName);
+
+                var elementLenses = function (element) {
+                    element.lenses === data.lenses
+                }
+
+
+                var thisLenses = pickArray.findIndex(elementLenses);
 
                 if (thisId < 0 || thisLenses < 0) {
                     pickArray.push(itemDetails)

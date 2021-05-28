@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -15,7 +15,7 @@
 header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -44,6 +44,22 @@ header a:hover {
   border: white;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 main {
   position: relative;
   z-index: 500;
@@ -59,14 +75,14 @@ main .container img {
   height: 265px;
   width: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .container .card {
   border: none;
 }
 main .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
 main .container a {
@@ -81,11 +97,16 @@ main .container a:hover {
 main .container a i {
   margin-right: 8px;
 }
+main .form {
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
 
 footer {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   align-content: center;

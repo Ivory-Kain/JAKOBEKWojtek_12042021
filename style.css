@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -15,7 +15,7 @@
 header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -59,14 +59,15 @@ main .container img {
   height: 265px;
   width: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .container .card {
   border: none;
+  width: 25rem;
 }
 main .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
 main .container a {
@@ -85,7 +86,7 @@ main .container a i {
 footer {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-wrap: nowrap;
   align-content: center;

@@ -18,108 +18,260 @@
     <link rel="stylesheet" type="text/css" href="basket.css" />
     <title>Panier</title>
   </head>
+
   <body>
     <div class="backgroundImage"></div>
     <header>
       <div class="logo">
         <img src="\images\logo.webp" alt="logo" id="logo" />
       </div>
+      <nav>
+        <button type="button" class="btn btnBasket btn-lg rounded-pill">
+          <a href="index.html">Accueil</a>
+          <span class="badge badge-light"></span>
+        </button>
+      </nav>
     </header>
     <main>
       <section id="contentContainer"></section>
-      <template id="sample">
-        <div class="container text-white">
-          <div class="name">
-            <h2></h2>
-          </div>
-          <div class="imageUrl">
-            <img src="" alt="vcam" />
-          </div>
-          <div class="price">
-            <p>Prix : <span></span></p>
-          </div>
-          <div class="description">
-            <p>Description : <span></span></p>
-          </div>
-          <div class="lenses">
-            <p>Lentilles : <span></span></p>
-          </div>
-          <div class="id">
-            <p>Ref : <span></span></p>
-          </div>
-          <button class="remove">Supprimer l'article</button>
-        </div>
-      </template>
+
       <button class="removeAll">Vider le panier</button>
       <div class="total text-white">
         <p>Prix total de la commande : <span></span></p>
       </div>
-      <form class="form text-white">
-        <ul>
-          <li class="firstName">
-            <label for="firstName">Nom : </label>
-            <input required type="text" id="firstName" name="firstName" />
-          </li>
-          <li class="lastName">
-            <label for="lastName">Prénom : </label>
-            <input required type="text" id="lastName" name="lastName" />
-          </li>
-          <li class="address">
-            <label for="address">Adresse : </label>
-            <input required type="text" id="address" name="address" />
-          </li>
-          <li class="city">
-            <label for="city">Ville : </label>
-            <input required type="text" id="city" name="city" />
-          </li>
-          <li class="email">
-            <label for="email">E-mail : </label>
-            <input required type="email" id="email" name="email" />
-          </li>
-        </ul>
-        <button class="validate">Valider votre panier</button>
+
+      <form class="form row g-3 text-white">
+        <div class="col-md-6">
+          <label for="firstName" class="form-label firstName">Nom</label>
+          <input
+            required
+            type="text"
+            class="bg-transparent form-control firstName"
+            id="firstName"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label lastName">Prénom</label>
+          <input
+            required
+            type="text"
+            class="bg-transparent form-control lastName"
+            id="lastName"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label email">Email</label>
+          <input
+            required
+            type="email"
+            class="bg-transparent form-control email"
+            id="email"
+            placeholder="Orinoco@gmail.com"
+          />
+        </div>
+        <div class="col-12">
+          <label for="address" class="form-label address">Adresse</label>
+          <input
+            required
+            type="text"
+            class="bg-transparent form-control address"
+            id="address"
+            placeholder="1 Rue des lilas "
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="city" class="form-label city">Ville</label>
+          <input
+            required
+            type="text"
+            class="bg-transparent form-control city"
+            id="city"
+          />
+        </div>
+
+        <div class="col-md-2">
+          <label for="zip" class="form-label zip">Code Postal</label>
+          <input
+            required
+            type="text"
+            class="bg-transparent form-control zip"
+            id="zip"
+          />
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary validate">
+            Valider votre panier
+          </button>
+        </div>
       </form>
     </main>
-    <footer class="text-white">
-      <div class="about">
-        <h4>Mieux nous connaitre</h4>
-        <ul>
-          <li><a href="#" class="text-white">A propos</a></li>
-          <li><a href="#" class="text-white">Recrutement</a></li>
-          <li><a href="#" class="text-white">Nos Magasins</a></li>
-        </ul>
-      </div>
-      <div class="payment">
-        <h4>Moyens de paiement</h4>
-        <ul>
-          <li><a href="#" class="text-white">Carte de paiement</a></li>
-          <li><a href="#" class="text-white">Paypal</a></li>
-          <li><a href="#" class="text-white">Chèques-cadeaux</a></li>
-        </ul>
-      </div>
-      <div class="help">
-        <h4>Besoin d'aide ?</h4>
-        <ul>
-          <li><a href="#" class="text-white">Service Client</a></li>
-          <li><a href="#" class="text-white">Contact Professionnels</a></li>
-          <li><a href="#" class="text-white">Contact Publicité</a></li>
-        </ul>
-      </div>
-      <div class="info">
-        <h4>Information légales</h4>
-        <ul>
-          <li>
-            <a href="#" class="text-white">Conditions générales de vente</a>
-          </li>
-          <li>
-            <a href="#" class="text-white"
-              >Conditions générales d'utilisation Marketplace</a
-            >
-          </li>
-          <li><a href="#" class="text-white">Mentions Légales</a></li>
-        </ul>
+    <footer>
+      <div class="container">
+        <div class="containerFooterTop row">
+          <div class="about col-md-3">
+            <h5 class="text-white"><u>Mieux nous connaitre</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light">A propos</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light">Recrutement</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Nos Magasins</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="payment col-md-3">
+            <h5 class="text-white"><u>Moyens de paiement</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Carte de paiement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light">Paypal</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Carte-cadeaux</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="help col-md-3">
+            <h5 class="text-white"><u>Besoin d'aide ?</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Service Client</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Contact Professionnels</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Contact Publicité</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="info col-md-3">
+            <h5 class="text-white"><u>Information légales</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white">Conditions générales de vente</a>
+              </li>
+              <li>
+                <a href="#" class="text-white"
+                  >Conditions générales d'utilisation
+                </a>
+              </li>
+              <li><a href="#" class="text-white">Mentions Légales </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="containerFooterBottom row">
+          <div class="col-md-3">
+            <div class="socialIcon">
+              <ul class="row justify-content-around list-unstyledb,">
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-google"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"><i class="bi bi-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="copyright-part text-center text-white">
+              @ 2021 All Rights Reserved Orinoco
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="paymentIcon text-right">
+              <ul class="row justify-content-around list-unstyled">
+                <li><i class="fab fa-cc-paypal text-white"></i></li>
+                <li><i class="fab fa-cc-visa text-white"></i></li>
+
+                <li><i class="fab fa-cc-mastercard text-white"></i></li>
+                <li><i class="fas fa-gift text-white"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- Le template produit -->
+
+    <template id="sample">
+      <div class="container text-white">
+        <div class="name">
+          <h2></h2>
+        </div>
+        <div class="imageUrl">
+          <img src="" alt="vcam" />
+        </div>
+        <div class="price">
+          <p>Prix : <span></span></p>
+        </div>
+        <div class="description">
+          <p>Description : <span></span></p>
+        </div>
+        <div class="lenses">
+          <p>Lentilles : <span></span></p>
+        </div>
+        <div class="id">
+          <p>Ref : <span></span></p>
+        </div>
+        <button class="remove">Supprimer l'article</button>
+      </div>
+    </template>
+
+    <!-- Les scripts -->
+
+    <script
+      src="https://kit.fontawesome.com/aacc6b388d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
     <script src="basket.js"></script>
   </body>
 </html>

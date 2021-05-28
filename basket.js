@@ -22,8 +22,11 @@ if (storageData !== null && storageData.length) {
 
         priceTotal.push(storageData[i].price)
         console.log(priceTotal);
-
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        
+        var reducer = function (accumulator, currentValue) {
+            return accumulator + currentValue
+        }
+        
         var reduc = priceTotal.reduce(reducer).toString()
         console.log(reduc);
         document.querySelector('.total span').textContent = reduc.substring(0, reduc.length - 2) + "." + reduc.substring(reduc.length - 2, reduc.length) + ' €'
@@ -48,7 +51,7 @@ if (storageData !== null && storageData.length) {
 } else {
     document.querySelector(".removeAll").style.display = "none"
     document.querySelector(".form").style.display = "none"
-    document.querySelector(".total").innerHTML = "Votre panier est vide pour le moment"
+    document.querySelector(".total").innerHTML = "Votre panier est vide pour le moment."
     localStorage.removeItem("oricaddy")
 }
 
@@ -61,8 +64,6 @@ document.querySelector('form').addEventListener("submit", function (e) {
     for (let i = 0; i < storageData.length; i++) {
         products.push(storageData[i].id);
 
-
-
         var userData = {
             "contact": {
                 "firstName": document.querySelector("#firstName").value,
@@ -70,14 +71,12 @@ document.querySelector('form').addEventListener("submit", function (e) {
                 "address": document.querySelector("#address").value,
                 "city": document.querySelector("#city").value,
                 "email": document.querySelector("#email").value,
+                "zip": document.querySelector("#zip").value,
                 "total": reduc
             },
 
             "products": products,
-
-
-
-
+            
         };
     }
 

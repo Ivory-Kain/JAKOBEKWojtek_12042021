@@ -18,16 +18,167 @@
     <link rel="stylesheet" type="text/css" href="validation.css" />
     <title>Document</title>
   </head>
-  <body>
-    <p class="card-text price">Nous vous remercions de votre confiance.</p>
-    <p class="card-text price">
-      Votre commande N° : <span class="orderId"></span>d'un montant de :
-      <span class="totalPrice"></span> est bien enregistrée!
-    </p>
 
-    <a href="index.html" class="text-dark product"
-      ><i class="bi bi-info-circle"></i>Retour à l'accueil</a
-    >
+  <body>
+    <div class="backgroundImage"></div>
+    <header>
+      <div class="logo">
+        <img src="\images\logo.webp" alt="logo" id="logo" />
+      </div>
+      <nav>
+        <button type="button" class="btn btnBasket btn-lg rounded-pill">
+          <a href="index.html">Accueil</a>
+          <span class="badge badge-light"></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <p class="thanks text-white">Nous vous remercions de votre confiance.</p>
+      <p class="summary text-white">
+        Votre commande N° : <span class="orderId text-white"></span> d'un
+        montant de : <span class="totalPrice text-white"></span> est bien
+        enregistrée!
+      </p>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="containerFooterTop row">
+          <div class="about col-md-3">
+            <h5 class="text-white"><u>Mieux nous connaitre</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light">A propos</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light">Recrutement</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Nos Magasins</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="payment col-md-3">
+            <h5 class="text-white"><u>Moyens de paiement</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Carte de paiement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light">Paypal</a>
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Carte-cadeaux</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="help col-md-3">
+            <h5 class="text-white"><u>Besoin d'aide ?</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Service Client</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Contact Professionnels</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-weight-light"
+                  >Contact Publicité</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="info col-md-3">
+            <h5 class="text-white"><u>Information légales</u></h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white">Conditions générales de vente</a>
+              </li>
+              <li>
+                <a href="#" class="text-white"
+                  >Conditions générales d'utilisation
+                </a>
+              </li>
+              <li><a href="#" class="text-white">Mentions Légales </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="containerFooterBottom row">
+          <div class="col-md-3">
+            <div class="socialIcon">
+              <ul class="row justify-content-around list-unstyledb,">
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-google"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="text-white"><i class="bi bi-rss"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="copyright-part text-center text-white">
+              @ 2021 All Rights Reserved Orinoco
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="paymentIcon text-right">
+              <ul class="row justify-content-around list-unstyled">
+                <li><i class="fab fa-cc-paypal text-white"></i></li>
+                <li><i class="fab fa-cc-visa text-white"></i></li>
+
+                <li><i class="fab fa-cc-mastercard text-white"></i></li>
+                <li><i class="fas fa-gift text-white"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Les scripts -->
+
+    <script
+      src="https://kit.fontawesome.com/aacc6b388d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
     <script src="validation.js"></script>
   </body>
 </html>
