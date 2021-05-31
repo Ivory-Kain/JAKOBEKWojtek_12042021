@@ -1,5 +1,5 @@
 body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]){
-    color: red !important;
+  
     header{
         background-color: rgba(0, 0, 0, 0.6);
     }
