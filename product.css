@@ -1,3 +1,16 @@
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) {
+  color: red !important;
+}
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) header {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .card-body {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .backgroundImage {
   background-image: url("./images/backgroundImage.webp");
   background-size: cover;
