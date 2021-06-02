@@ -173,7 +173,7 @@
               <h2 class="card-title"></h2>
             </div>
             <div class="description">
-              <p class="card-text">Description : <span></span></p>
+              <p>Description : <span></span></p>
             </div>
             <div class="lenses">
               <p>Lentilles : <span></span></p>
@@ -182,18 +182,25 @@
               <p>Ref : <span></span></p>
             </div>
             <div class="price">
-              <p>Prix : <span></span></p>
+              <p class="h3">Prix : <span></span></p>
             </div>
             <div class="choicePick">
               <form class="text-white">
                 <label for="optionProduit">Choix de lentilles</label>
                 <select
-                  class="userChoice"
+                  class="userChoice form-select bg-transparent text-white"
                   name="optionProduit"
                   id="optionProduct"
                   required
+                  aria-label="default select"
                 >
-                  <option value="valeur_0" disabled selected value>
+                  <option
+                    class="choice"
+                    value="value_0"
+                    disabled
+                    selected
+                    value
+                  >
                     --Votre choix--
                   </option>
                 </select>
@@ -201,7 +208,13 @@
 
               <button
                 disabled
-                class="btn btnBasket btn-lg rounded-pill text-white"
+                class="
+                  btnPickItem
+                  btn-lg
+                  rounded-pill
+                  text-white
+                  bg-transparent
+                "
                 id="btn"
                 name="btn"
               >

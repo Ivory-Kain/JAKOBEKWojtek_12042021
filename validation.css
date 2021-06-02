@@ -1,11 +1,15 @@
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) header {
   background-color: rgba(0, 0, 0, 0.6);
 }
-body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .card-body {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .backgroundImage {
@@ -39,10 +43,7 @@ header #logo {
   width: 250px;
   padding-left: 30px;
 }
-header .basket {
-  padding-right: 30px;
-}
-header .btnBasket:hover {
+header .btnHome:hover {
   box-shadow: 0 0 10px 1px white;
 }
 header a {
@@ -56,44 +57,29 @@ header a:hover {
 }
 
 main {
-  position: relative;
-  z-index: 500;
-  padding: 50px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
 }
-main h1 {
-  margin-bottom: 40px;
-}
-main .container {
-  padding-bottom: 20px;
-}
-main .container img {
-  height: 265px;
-  width: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-main .container .card {
-  border: none;
-}
-main .container .card .card-body {
+main .thanksToCustomer {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  text-shadow: #323232 1px 0 10px;
 }
-main .container a {
-  text-decoration: none;
-  padding: 2px 5px;
-  border-radius: 15px;
-  border: transparent 1px solid;
+main .thanksToCustomer .thanks {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
-main .container a:hover {
-  box-shadow: 0 0 5px 1px white;
-}
-main .container a i {
-  margin-right: 8px;
+
+.thanks {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 footer {
+  width: 100%;
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);

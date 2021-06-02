@@ -13,7 +13,7 @@ fetch("http://localhost:3000/api/cameras/" + id)
 
     })
     .then(function (data) {
-        console.log("data : ", data);
+        
         var template = document.getElementById("sample").content
         var copyHTML = document.importNode(template, true);
         var modifiedPrice = data.price.toString()
@@ -86,11 +86,13 @@ fetch("http://localhost:3000/api/cameras/" + id)
 
             document.location.reload();
         })
+        console.log("dataId", data);
     })
     .catch(function (err) {});
 
 if (localStorage.getItem('oricaddy') !== null) {
     document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
+    console.log("oricaddy", localStorage.getItem('oricaddy'));
 } else {
     document.querySelector(".badge").style.display = "none"
 }

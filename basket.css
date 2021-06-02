@@ -86,8 +86,8 @@ main .container {
   padding-bottom: 20px;
 }
 main .container img {
-  height: 265px;
-  width: auto;
+  height: 300px;
+  width: 380px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -98,6 +98,12 @@ main .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
+}
+main .container .card .card-body .remove {
+  border: solid 1px white;
+}
+main .container .card .card-body .remove:hover {
+  box-shadow: 0 0 5px 1px white;
 }
 main .container a {
   text-decoration: none;
@@ -115,6 +121,30 @@ main .form {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+}
+main .removeAll {
+  border: solid 1px white;
+}
+main .removeAll:hover {
+  box-shadow: 0 0 5px 1px white;
+}
+main .btnValidForm {
+  margin-top: 30px;
+  border: solid 1px white;
+}
+main .btnValidForm:hover {
+  box-shadow: 0 0 5px 1px white;
+}
+main .recap {
+  display: flex;
+  justify-content: space-evenly;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  align-items: center;
+}
+main .btnValidOrder {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 footer {

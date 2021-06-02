@@ -8,7 +8,7 @@ fetch("http://localhost:3000/api/cameras")
   .then(function (data) {
 
 
-    // Variale "template = ID sample  "
+    // Variable "template = ID sample  "
     var template = document.getElementById("sample").content
 
     // Boucle For
@@ -40,15 +40,20 @@ fetch("http://localhost:3000/api/cameras")
 
 
     }
+    console.log("data", data);
 
   })
+
 
   // en cas d'erreur 
   .catch(function (err) {
 
   });
 if (localStorage.getItem('oricaddy') !== null) {
+
   document.querySelector("span.badge").textContent = JSON.parse(localStorage.getItem('oricaddy')).length
+
+  console.log("oricaddy", localStorage.getItem('oricaddy'));
 } else {
   document.querySelector(".badge").style.display = "none"
 }

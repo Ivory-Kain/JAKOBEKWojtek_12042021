@@ -1,25 +1,28 @@
-body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]){
-   
-    header{
+body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]) {
+
+    header {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    .card-body{
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .form{
+
+    .card-body {
         background-color: rgba(0, 0, 0, 0.4);
     }
 
-    footer{
+    .form {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
+
 .backgroundImage {
     background-image: url("./images/backgroundImage.webp");
     background-size: cover;
     background-position: center;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -32,7 +35,7 @@ body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]){
 header {
     background-color: transparent;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -78,7 +81,7 @@ header {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -86,12 +89,12 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid white;
-  -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
+    border: 1px solid white;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 main {
@@ -110,10 +113,10 @@ main {
 
 
         img {
-            height: 265px;
-            width: auto;
+            height: 300px;
+            width: 380px;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
 
         }
 
@@ -122,14 +125,28 @@ main {
 
             .card-body {
                 -webkit-backdrop-filter: blur(3px);
-                        backdrop-filter: blur(3px);
+                backdrop-filter: blur(3px);
                 text-shadow: #323232 1px 0 10px;
                 ;
+
+
+
+                .remove {
+                    border: solid 1px white;
+
+                    &:hover {
+                        box-shadow: 0 0 5px 1px white;
+                    }
+                }
+
+
+
 
 
             }
 
         }
+
 
 
 
@@ -156,13 +173,41 @@ main {
     .form {
         background-color: transparent;
         -webkit-backdrop-filter: blur(3px);
-                backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
 
 
 
-}
+    }
 
+    .removeAll {
+        border: solid 1px white;
 
+        &:hover {
+            box-shadow: 0 0 5px 1px white;
+        }
+    }
+
+    .btnValidForm {
+        margin-top: 30px;
+        border: solid 1px white;
+
+        &:hover {
+            box-shadow: 0 0 5px 1px white;
+        }
+    }
+
+    .recap {
+        display: flex;
+        justify-content: space-evenly;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        align-items: center;
+    }
+
+    .btnValidOrder {
+        display: flex;
+        justify-content: space-evenly;
+    }
 
 
 
@@ -171,7 +216,7 @@ main {
 footer {
     background-color: transparent;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-wrap: nowrap;
     align-content: center;

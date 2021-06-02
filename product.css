@@ -80,6 +80,24 @@ main .container .card .card-body {
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
+main .container .card .card-body .btnPickItem {
+  border: white solid 1px;
+  transition-duration: 1s;
+  box-shadow: 0 0 2px 1px white;
+}
+main .container .card .card-body .btnPickItem[disabled] {
+  border: transparent solid 1px;
+  box-shadow: none;
+}
+main .container .card .card-body .userChoice option {
+  background: black;
+}
+main .container .card .card-body .choice {
+  display: none;
+}
+main .container .card .card-body label {
+  margin: 0;
+}
 main .container .choicePick {
   display: flex;
   justify-content: space-evenly;

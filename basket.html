@@ -28,16 +28,20 @@
       <nav>
         <button type="button" class="btn btnBasket btn-lg rounded-pill">
           <a href="./index.html">Accueil</a>
-          <span class="badge badge-light"></span>
         </button>
       </nav>
     </header>
     <main>
       <section id="contentContainer"></section>
-
-      <button class="removeAll">Vider le panier</button>
-      <div class="total text-white">
-        <p>Prix total de la commande : <span></span></p>
+      <div class="recap">
+        <div class="total text-white col-6">
+          <p class="h2">Prix total de la commande : <span></span></p>
+        </div>
+        <button
+          class="removeAll btn-lg rounded-pill text-white bg-transparent col-2"
+        >
+          Vider le panier
+        </button>
       </div>
 
       <form class="form row g-3 text-white">
@@ -50,6 +54,7 @@
             type="text"
             class="bg-transparent form-control firstName text-white"
             id="firstName"
+            placeholder="Dupont"
           />
         </div>
         <div class="col-md-6">
@@ -61,6 +66,7 @@
             type="text"
             class="bg-transparent form-control lastName text-white"
             id="lastName"
+            placeholder="Pierre"
           />
         </div>
 
@@ -83,7 +89,7 @@
             type="text"
             class="bg-transparent form-control address text-white"
             id="address"
-            placeholder="1 Rue des lilas "
+            placeholder="Mon Adresse "
           />
         </div>
 
@@ -94,6 +100,7 @@
             type="text"
             class="bg-transparent form-control city text-white"
             id="city"
+            placeholder="Ma ville"
           />
         </div>
 
@@ -104,11 +111,22 @@
             type="text"
             class="bg-transparent form-control zip text-white"
             id="zip"
+            placeholder="Code Postal "
           />
         </div>
         <div class="col-12"></div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary validate">
+        <div class="btnValidOrder col-12">
+          <button
+            type="submit"
+            class="
+              btnValidForm
+              btn-lg
+              rounded-pill
+              text-white
+              bg-transparent
+              col-4
+            "
+          >
             Valider votre panier
           </button>
         </div>
@@ -240,25 +258,44 @@
 
     <template id="sample">
       <div class="container text-white">
-        <div class="name">
-          <h2></h2>
+        <div class="card bg-transparent text-white mb-3">
+          <div class="row g-0">
+            <div class="imageUrl col-md-4">
+              <img src="" alt="vcam" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="name">
+                  <h2></h2>
+                </div>
+                <div class="price">
+                  <p class="h5">Prix : <span></span></p>
+                </div>
+                <div class="description">
+                  <p>Description : <span></span></p>
+                </div>
+                <div class="lenses">
+                  <p>Lentilles : <span></span></p>
+                </div>
+                <div class="id">
+                  <p>Ref : <span></span></p>
+                </div>
+                <button
+                  class="
+                    remove
+                    btnRemoveItem
+                    btn-lg
+                    rounded-pill
+                    text-white
+                    bg-transparent
+                  "
+                >
+                  Supprimer l'article
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="imageUrl">
-          <img src="" alt="vcam" />
-        </div>
-        <div class="price">
-          <p>Prix : <span></span></p>
-        </div>
-        <div class="description">
-          <p>Description : <span></span></p>
-        </div>
-        <div class="lenses">
-          <p>Lentilles : <span></span></p>
-        </div>
-        <div class="id">
-          <p>Ref : <span></span></p>
-        </div>
-        <button class="remove">Supprimer l'article</button>
       </div>
     </template>
 
