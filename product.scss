@@ -1,5 +1,4 @@
 body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]) {
-
     header {
         background-color: rgba(0, 0, 0, 0.6);
     }
@@ -43,20 +42,19 @@ header {
     #logo {
         width: 250px;
         padding-left: 30px;
-
     }
 
-    .basket {
-        padding-right: 30px;
-
+    .btnHome {
+        &:hover {
+            box-shadow: 0 0 10px 1px white;
+        }
     }
 
-
-    .btnBasket:hover {
-        box-shadow: 0 0 10px 1px white;
-
+    .btnBasket {
+        &:hover {
+            box-shadow: 0 0 10px 1px white;
+        }
     }
-
 
     a {
         color: white;
@@ -68,29 +66,17 @@ header {
             border: white;
         }
     }
-
-
-
-
-
-
 }
 
 main {
-
     position: relative;
     z-index: 500;
     padding: 50px;
-
-
-
-
 
     .container {
         padding: 0;
 
         .imageUrl {
-
             height: 400px;
 
             img {
@@ -98,7 +84,6 @@ main {
                 object-fit: cover;
                 max-width: 100%;
                 max-height: 100%;
-
             }
         }
 
@@ -106,56 +91,40 @@ main {
             border: none;
 
             .card-body {
-
                 -webkit-backdrop-filter: blur(3px);
-
                 backdrop-filter: blur(3px);
                 text-shadow: #323232 1px 0 10px;
 
                 .btnPickItem {
                     border: white solid 1px;
-                    transition-duration : 1s;
+                    transition-duration: 1s;
                     box-shadow: 0 0 2px 1px white;
-
                 }
 
                 .btnPickItem[disabled] {
                     border: transparent solid 1px;
                     box-shadow: none;
-                    
                 }
 
                 .userChoice option {
-                   
-                  
                     background: black;
-                    
                 }
-                .choice{
+
+                .choice {
                     display: none;
                 }
-                label{
+
+                label {
                     margin: 0;
                 }
-
-
-
             }
-
-
         }
-
-
 
         .choicePick {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-
-
         }
-
-
 
         a {
             text-decoration: none;
@@ -164,23 +133,14 @@ main {
             border: transparent 1px solid;
 
             &:hover {
-
                 box-shadow: 0 0 5px 1px white;
-
             }
-
 
             i {
                 margin-right: 8px;
             }
         }
-
     }
-
-
-
-
-
 }
 
 footer {
@@ -193,27 +153,26 @@ footer {
     justify-content: space-evenly;
     align-items: flex-start;
 
-    .socialIcon {
+    .containerFooter {
+        padding-bottom: 20px;
 
-        ul {
+        .socialIcon {
+            ul {
+                li {
+                    display: inline-block;
+                    width: 1.2em;
+                    transition: all .2s ease-in-out;
 
-            li {
-                display: inline-block;
-                width: 1.2em;
-                transition: all .2s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.5);
-                    background: rgb(200, 124, 26);
-                    background: linear-gradient(90deg, rgba(200, 124, 26, 1) 0%, rgba(141, 91, 251, 1) 100%);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    &:hover {
+                        transform: scale(1.5);
+                        background: rgb(200, 124, 26);
+                        background: linear-gradient(90deg, rgba(200, 124, 26, 1) 0%, rgba(141, 91, 251, 1) 100%);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }
     }
-
-
-
 }

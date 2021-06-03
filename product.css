@@ -39,8 +39,8 @@ header #logo {
   width: 250px;
   padding-left: 30px;
 }
-header .basket {
-  padding-right: 30px;
+header .btnHome:hover {
+  box-shadow: 0 0 10px 1px white;
 }
 header .btnBasket:hover {
   box-shadow: 0 0 10px 1px white;
@@ -126,12 +126,15 @@ footer {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-footer .socialIcon ul li {
+footer .containerFooter {
+  padding-bottom: 20px;
+}
+footer .containerFooter .socialIcon ul li {
   display: inline-block;
   width: 1.2em;
   transition: all 0.2s ease-in-out;
 }
-footer .socialIcon ul li:hover {
+footer .containerFooter .socialIcon ul li:hover {
   transform: scale(1.5);
   background: #c87c1a;
   background: linear-gradient(90deg, #c87c1a 0%, #8d5bfb 100%);

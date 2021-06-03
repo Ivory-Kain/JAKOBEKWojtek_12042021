@@ -1,21 +1,22 @@
-body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]){
-
-    header{
+body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]) {
+    header {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    
 
-    footer{
+    .thanksToCustomer {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    footer {
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
 }
 
 .backgroundImage {
@@ -23,7 +24,7 @@ body{
     background-size: cover;
     background-position: center;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -36,7 +37,7 @@ body{
 header {
     background-color: transparent;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -48,17 +49,11 @@ header {
     #logo {
         width: 250px;
         padding-left: 30px;
-
     }
-
-   
-
 
     .btnHome:hover {
         box-shadow: 0 0 10px 1px white;
-
     }
-
 
     a {
         color: white;
@@ -70,76 +65,61 @@ header {
             border: white;
         }
     }
-
-
-
-
-
-
 }
-main{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
 
-    .thanksToCustomer{
+main {
+    position: relative;
+	z-index: 500;
+	padding: 50px;
+
+    .thanksToCustomer {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
 
-        .thanks{
+        .thanks {
             display: flex;
             justify-content: space-evenly;
             margin-bottom: 20px;
         }
+        .summary{
+            display: flex;
+            justify-content: center;
+        }
     }
-   
 }
-
-.thanks{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-}
-
-
 
 
 
 footer {
-    
-    
-    width: 100%;    
     background-color: transparent;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: space-evenly;
     align-items: flex-start;
 
-    .socialIcon {
+    .containerFooter {
+        padding-bottom: 20px;
 
-        ul {
+        .socialIcon {
+            ul {
+                li {
+                    display: inline-block;
+                    width: 1.2em;
+                    transition: all .2s ease-in-out;
 
-            li {
-                display: inline-block;
-                width: 1.2em;
-                transition: all .2s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.5);
-                    background: rgb(200, 124, 26);
-                    background: linear-gradient(90deg, rgba(200, 124, 26, 1) 0%, rgba(141, 91, 251, 1) 100%);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    &:hover {
+                        transform: scale(1.5);
+                        background: rgb(200, 124, 26);
+                        background: linear-gradient(90deg, rgba(200, 124, 26, 1) 0%, rgba(141, 91, 251, 1) 100%);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }
     }
-
-
-
 }

@@ -4,11 +4,21 @@ body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) header {
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .card-body {
   background-color: rgba(0, 0, 0, 0.4);
 }
-body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .form {
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .formContainer {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .recap {
   background-color: rgba(0, 0, 0, 0.4);
 }
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .backgroundImage {
@@ -42,10 +52,7 @@ header #logo {
   width: 250px;
   padding-left: 30px;
 }
-header .basket {
-  padding-right: 30px;
-}
-header .btnBasket:hover {
+header .btnHome:hover {
   box-shadow: 0 0 10px 1px white;
 }
 header a {
@@ -75,18 +82,18 @@ select:-webkit-autofill:focus {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 500;
   padding: 50px;
-}
-main h1 {
-  margin-bottom: 40px;
 }
 main .container {
   padding-bottom: 20px;
 }
 main .container img {
-  height: 300px;
+  height: 100%;
   width: 380px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -117,7 +124,8 @@ main .container a:hover {
 main .container a i {
   margin-right: 8px;
 }
-main .form {
+main .formContainer {
+  width: 100%;
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
@@ -136,11 +144,19 @@ main .btnValidForm:hover {
   box-shadow: 0 0 5px 1px white;
 }
 main .recap {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   align-items: center;
+}
+main .recap .total {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 main .btnValidOrder {
   display: flex;
@@ -157,12 +173,15 @@ footer {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-footer .socialIcon ul li {
+footer .containerFooter {
+  padding-bottom: 20px;
+}
+footer .containerFooter .socialIcon ul li {
   display: inline-block;
   width: 1.2em;
   transition: all 0.2s ease-in-out;
 }
-footer .socialIcon ul li:hover {
+footer .containerFooter .socialIcon ul li:hover {
   transform: scale(1.5);
   background: #c87c1a;
   background: linear-gradient(90deg, #c87c1a 0%, #8d5bfb 100%);
