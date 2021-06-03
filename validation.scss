@@ -51,20 +51,19 @@ header {
         padding-left: 30px;
     }
 
-    .btnHome:hover {
-        box-shadow: 0 0 10px 1px white;
-    }
-
-    a {
+    .btnHome{
+        
         color: white;
         text-decoration: none;
-
         &:hover {
+            box-shadow: 0 0 10px 1px white;
             color: white;
             text-decoration: none;
             border: white;
         }
     }
+
+   
 }
 
 main {
