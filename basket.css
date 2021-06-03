@@ -52,14 +52,12 @@ header #logo {
   width: 250px;
   padding-left: 30px;
 }
-header .btnHome:hover {
-  box-shadow: 0 0 10px 1px white;
-}
-header a {
+header .btnHome {
   color: white;
   text-decoration: none;
 }
-header a:hover {
+header .btnHome:hover {
+  box-shadow: 0 0 10px 1px white;
   color: white;
   text-decoration: none;
   border: white;

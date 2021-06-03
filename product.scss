@@ -45,27 +45,28 @@ header {
     }
 
     .btnHome {
-        &:hover {
-            box-shadow: 0 0 10px 1px white;
-        }
-    }
-
-    .btnBasket {
-        &:hover {
-            box-shadow: 0 0 10px 1px white;
-        }
-    }
-
-    a {
         color: white;
         text-decoration: none;
-
         &:hover {
+            box-shadow: 0 0 10px 1px white;
             color: white;
             text-decoration: none;
             border: white;
         }
     }
+
+    .btnBasket {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            box-shadow: 0 0 10px 1px white;
+            color: white;
+            text-decoration: none;
+            border: white;
+        }
+    }
+
+    
 }
 
 main {
