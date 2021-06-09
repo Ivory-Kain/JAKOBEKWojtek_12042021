@@ -10,9 +10,6 @@ body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .backgroundImage {
@@ -58,35 +55,18 @@ main .thanksToCustomer {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
-main .thanksToCustomer .thanks {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-}
-main .thanksToCustomer .summary {
-  display: flex;
-  justify-content: center;
-}
 
 footer {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-footer .containerFooter {
-  padding-bottom: 20px;
 }
 footer .containerFooter h5 {
   text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;
-  width: 1.2em;
+  width: 25px;
   transition: all 0.2s ease-in-out;
 }
 footer .containerFooter .socialIcon ul li:hover {

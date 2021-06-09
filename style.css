@@ -50,33 +50,33 @@ main {
 main h1 {
   margin-bottom: 40px;
 }
-main .container-fluid {
+main .container {
   padding-bottom: 20px;
 }
-main .container-fluid img {
+main .container img {
   height: 265px;
   width: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
-main .container-fluid .card {
+main .container .card {
   border: none;
 }
-main .container-fluid .card .card-body {
+main .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
-main .container-fluid a {
+main .container a {
   text-decoration: none;
   padding: 2px 5px;
   border-radius: 15px;
   border: transparent 1px solid;
 }
-main .container-fluid a:hover {
+main .container a:hover {
   box-shadow: 0 0 5px 1px white;
 }
-main .container-fluid a i {
+main .container a i {
   margin-right: 8px;
 }
 
@@ -84,21 +84,13 @@ footer {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-footer .containerFooter {
-  padding-bottom: 20px;
 }
 footer .containerFooter h5 {
   text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;
-  width: 1.2em;
+  width: 25px;
   transition: all 0.2s ease-in-out;
 }
 footer .containerFooter .socialIcon ul li:hover {

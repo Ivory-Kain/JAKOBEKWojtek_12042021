@@ -21,15 +21,17 @@
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="d-flex flex-column justify-content-between">
     <div class="backgroundImage"></div>
-    <header class="d-flex align-items-center justify-content-around">
-      <div class="logo">
+    <header
+      class="d-flex align-items-center justify-content-around text-center"
+    >
+      <div class="logo col-md-6">
         <img src="./images/logo.webp" alt="logo" id="logo" />
       </div>
-      <nav class="mr-4 col-4">
+      <nav class="mr-4 col-4 col-md-6 d-flex justify-content-around">
         <button
-          class="btn btnHome btn-lg rounded-pill"
+          class="btn btnHome btn-lg rounded-pill col-xl-2"
           onclick="window.location.href = './index.html';"
         >
           Accueil
@@ -38,19 +40,31 @@
     </header>
     <main class="p-0">
       <div class="thanksToCustomer col-12 text-center">
-        <p class="thanks text-white h2 col-12 d-flex justify-content-center">
+        <p
+          class="
+            thanks
+            text-white
+            h2
+            pt-5
+            col-12
+            d-flex
+            justify-content-center
+            mb-4
+          "
+        >
           Nous vous remercions de votre confiance.
         </p>
         <p
           class="
             summary
+            pb-5
+            pt-5
             text-white
             h4
             text-center
             d-flex
             flex-column
             col-12
-            mb-4
           "
         >
           Votre commande N° : &nbsp;
@@ -71,84 +85,82 @@
         </p>
       </div>
     </main>
-    <footer>
-      <div class="containerFooter col-10">
+    <footer class="d-flex justify-content-around">
+      <div class="containerFooter pb-4 col-10">
         <div class="containerFooterTop row">
-          <div class="about col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Mieux nous connaitre</h5>
-            <ul class="list-unstyled mx-auto">
-              <li class="mx-auto d-flex justify-content-around">
+          <div class="about col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Mieux nous connaitre</h5>
+            <ul class="list-unstyled">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">A propos</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">Recrutement</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Nos Magasins</a
                 >
               </li>
             </ul>
           </div>
-          <div
-            class="payment col-md-3 d-flex flex-column justify-content-around"
-          >
-            <h5 class="text-white mx-auto">Moyens de paiement</h5>
+          <div class="payment col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Moyens de paiement</h5>
             <ul class="list-unstyled">
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Carte de paiement</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">Paypal</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Carte-cadeaux</a
                 >
               </li>
             </ul>
           </div>
-          <div class="help col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Besoin d'aide ?</h5>
-            <ul class="list-unstyled mx-auto">
-              <li class="mx-auto d-flex justify-content-around">
+          <div class="help col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Besoin d'aide ?</h5>
+            <ul class="list-unstyled">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Service Client</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Professionnels</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Publicité</a
                 >
               </li>
             </ul>
           </div>
-          <div class="info col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Information légales</h5>
+          <div class="info col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Information légales</h5>
             <ul class="list-unstyled">
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white">Conditions générales de vente</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white"
                   >Conditions générales d'utilisation
                 </a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white">Mentions Légales </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="containerFooterBottom row">
-          <div class="col-md-3 mx-auto">
+          <div class="col-12 col-md-3">
             <div class="socialIcon">
               <ul class="row justify-content-around list-unstyledb p-0">
                 <li>
@@ -179,12 +191,12 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-6 mx-auto">
+          <div class="col-12 col-md-6">
             <div class="copyright-part text-center text-white mb-4">
               @ 2021 All Rights Reserved Orinoco
             </div>
           </div>
-          <div class="col-md-3 mx-auto">
+          <div class="col-12 col-md-3">
             <div class="paymentIcon text-right">
               <ul class="row justify-content-around list-unstyled">
                 <li><i class="fab fa-cc-paypal text-white fa-lg"></i></li>

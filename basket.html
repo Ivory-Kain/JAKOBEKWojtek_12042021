@@ -22,13 +22,15 @@
 
   <body>
     <div class="backgroundImage"></div>
-    <header class="d-flex align-items-center justify-content-around">
-      <div class="logo">
+    <header
+      class="d-flex align-items-center justify-content-around text-center"
+    >
+      <div class="logo col-md-6">
         <img src="./images/logo.webp" alt="logo" id="logo" />
       </div>
-      <nav class="mr-4 col-4">
+      <nav class="mr-4 col-4 col-md-6 d-flex justify-content-around">
         <button
-          class="btn btnHome btn-lg rounded-pill"
+          class="btn btnHome btn-lg rounded-pill col-xl-2"
           onclick="window.location.href = './index.html';"
         >
           Accueil
@@ -36,17 +38,18 @@
       </nav>
     </header>
     <main class="p-0">
-      <section id="contentContainer"></section>
+      <section id="contentContainer" class="col-md-12 col-xl-8 p-0"></section>
       <div
         class="
           recap
           text-white text-center
           h2
-          col-12
+          col-10
           mx-auto
           d-flex
           flex-column
           justify-content-center
+          align-items-center
           mt-5
           mb-5
         "
@@ -63,7 +66,9 @@
             mb-4
           "
         >
-          <p class="h3 mb-4">Prix total de la commande : <span></span></p>
+          <p class="h3 mb-4 col-12">
+            Prix total de la commande : <span></span>
+          </p>
         </div>
         <button
           class="
@@ -76,6 +81,7 @@
             d-flex
             justify-content-around
             mb-4
+            col-xl-2
           "
         >
           Vider le panier
@@ -169,6 +175,7 @@
               bg-transparent
               col-12
               mb-4
+              col-xl-2
             "
           >
             Valider votre panier
@@ -176,84 +183,82 @@
         </div>
       </form>
     </main>
-    <footer>
+    <footer class="d-flex justify-content-around">
       <div class="containerFooter col-10">
         <div class="containerFooterTop row">
-          <div class="about col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Mieux nous connaitre</h5>
-            <ul class="list-unstyled mx-auto">
-              <li class="mx-auto d-flex justify-content-around">
+          <div class="about col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Mieux nous connaitre</h5>
+            <ul class="list-unstyled">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">A propos</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">Recrutement</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Nos Magasins</a
                 >
               </li>
             </ul>
           </div>
-          <div
-            class="payment col-md-3 d-flex flex-column justify-content-around"
-          >
-            <h5 class="text-white mx-auto">Moyens de paiement</h5>
+          <div class="payment col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Moyens de paiement</h5>
             <ul class="list-unstyled">
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Carte de paiement</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light">Paypal</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Carte-cadeaux</a
                 >
               </li>
             </ul>
           </div>
-          <div class="help col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Besoin d'aide ?</h5>
-            <ul class="list-unstyled mx-auto">
-              <li class="mx-auto d-flex justify-content-around">
+          <div class="help col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Besoin d'aide ?</h5>
+            <ul class="list-unstyled">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Service Client</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Professionnels</a
                 >
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Publicité</a
                 >
               </li>
             </ul>
           </div>
-          <div class="info col-md-3 d-flex flex-column justify-content-around">
-            <h5 class="text-white mx-auto">Information légales</h5>
+          <div class="info col-12 col-md-6 col-xl-3">
+            <h5 class="text-white text-center">Information légales</h5>
             <ul class="list-unstyled">
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white">Conditions générales de vente</a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white"
                   >Conditions générales d'utilisation
                 </a>
               </li>
-              <li class="mx-auto d-flex justify-content-around">
+              <li class="text-center">
                 <a href="#" class="text-white">Mentions Légales </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="containerFooterBottom row">
-          <div class="col-md-3 mx-auto">
+          <div class="col-12 col-md-3">
             <div class="socialIcon">
               <ul class="row justify-content-around list-unstyledb p-0">
                 <li>
@@ -284,12 +289,12 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-6 mx-auto">
+          <div class="col-12 col-md-6">
             <div class="copyright-part text-center text-white mb-4">
               @ 2021 All Rights Reserved Orinoco
             </div>
           </div>
-          <div class="col-md-3 mx-auto">
+          <div class="col-12 col-md-3">
             <div class="paymentIcon text-right">
               <ul class="row justify-content-around list-unstyled">
                 <li><i class="fab fa-cc-paypal text-white fa-lg"></i></li>
@@ -307,46 +312,44 @@
     <!-- Le template produit -->
 
     <template id="sample">
-      <div class="container text-white">
+      <div class="container col-md-12 p-0">
         <div class="card bg-transparent text-white mb-3">
-          <div class="row g-0">
-            <div class="imageUrl p-0 ms-2 me-2">
-              <img src="" alt="vcam" />
-            </div>
-            <div class="col-md-8 p-0 ms-2 me-2">
-              <div class="card-body">
-                <div class="name">
-                  <h2></h2>
-                </div>
-                <div class="price">
-                  <p class="h5">Prix : <span></span></p>
-                </div>
-                <div class="description">
-                  <p>Description : <span></span></p>
-                </div>
-                <div class="lenses">
-                  <p>Lentilles : <span></span></p>
-                </div>
-                <div class="id">
-                  <p>Ref : <span></span></p>
-                </div>
-                <button
-                  class="
-                    remove
-                    btnRemoveItem
-                    btn-lg
-                    rounded-pill
-                    text-white
-                    bg-transparent
-                    d-flex
-                    justify-content-center
-                    mx-auto
-                    col-12
-                  "
-                >
-                  Supprimer l'article
-                </button>
+          <div class="imageUrl p-0">
+            <img src="" alt="vcam" />
+          </div>
+          <div class="p-0">
+            <div class="card-body">
+              <div class="name">
+                <h2></h2>
               </div>
+              <div class="price">
+                <p class="h5">Prix : <span></span></p>
+              </div>
+              <div class="description">
+                <p>Description : <span></span></p>
+              </div>
+              <div class="lenses">
+                <p>Lentilles : <span></span></p>
+              </div>
+              <div class="id">
+                <p>Ref : <span></span></p>
+              </div>
+              <button
+                class="
+                  remove
+                  btnRemoveItem
+                  btn-lg
+                  rounded-pill
+                  text-white
+                  bg-transparent
+                  d-flex
+                  justify-content-center
+                  mx-auto
+                  col-12 col-xl-4
+                "
+              >
+                Supprimer l'article
+              </button>
             </div>
           </div>
         </div>

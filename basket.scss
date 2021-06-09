@@ -95,7 +95,7 @@ main {
 		padding-bottom: 20px;
 
 		img {
-			height: 100%;
+			height: 350px;
 			width: 100%;
 			-o-object-fit: cover;
 			object-fit: cover;
@@ -161,9 +161,9 @@ main {
 	}
 
 	.recap {
-		width: 100%;		
+		width: 100%;
 		-webkit-backdrop-filter: blur(3px);
-		backdrop-filter: blur(3px);	
+		backdrop-filter: blur(3px);
 
 		.total {
 			font-size: 30px;
@@ -176,16 +176,10 @@ main {
 	}
 }
 
-
 footer {
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(3px);
 	backdrop-filter: blur(3px);
-	display: flex;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: space-evenly;
-	align-items: flex-start;
 
 	.containerFooter {
 		padding-bottom: 20px;
@@ -198,7 +192,7 @@ footer {
 			ul {
 				li {
 					display: inline-block;
-					width: 1.2em;
+					width: 25px;
 					transition: all .2s ease-in-out;
 
 					&:hover {

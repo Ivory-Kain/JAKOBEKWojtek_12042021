@@ -31,23 +31,22 @@ header {
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(3px);
 	backdrop-filter: blur(3px);
-	
 
 	#logo {
 		width: 230px;
-		
 	}
 
 	.btnBasket {
-        color: white;
-        text-decoration: none;
-        &:hover {
-            box-shadow: 0 0 10px 1px white;
-            color: white;
-            text-decoration: none;
-            border: white;
-        }
-    }
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			box-shadow: 0 0 10px 1px white;
+			color: white;
+			text-decoration: none;
+			border: white;
+		}
+	}
 }
 
 main {
@@ -59,7 +58,7 @@ main {
 		margin-bottom: 40px;
 	}
 
-	.container-fluid {
+	.container {
 		padding-bottom: 20px;
 
 		img {
@@ -71,7 +70,6 @@ main {
 
 		.card {
 			border: none;
-			
 
 			.card-body {
 				-webkit-backdrop-filter: blur(3px);
@@ -102,15 +100,10 @@ footer {
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(3px);
 	backdrop-filter: blur(3px);
-	display: flex;
-	flex-wrap: nowrap;
-	align-content: center;
-	justify-content: space-evenly;
-	align-items: flex-start;
 
 	.containerFooter {
-		padding-bottom: 20px;
-		h5{
+
+		h5 {
 			text-decoration: underline;
 		}
 
@@ -118,7 +111,7 @@ footer {
 			ul {
 				li {
 					display: inline-block;
-					width: 1.2em;
+					width: 25px;
 					transition: all .2s ease-in-out;
 
 					&:hover {
@@ -134,9 +127,3 @@ footer {
 		}
 	}
 }
-
-
-  
-  
-  
- 
