@@ -27,17 +27,9 @@ header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 0;
 }
 header #logo {
-  width: 250px;
-  padding-left: 30px;
+  width: 230px;
 }
 header .btnHome {
   color: white;
@@ -60,64 +52,61 @@ header .btnBasket:hover {
   border: white;
 }
 
-main {
+.containerMain {
   position: relative;
   z-index: 500;
   padding: 50px;
 }
-main .container {
+.containerMain .container-fluid {
   padding: 0;
 }
-main .container .imageUrl {
-  height: 400px;
-}
-main .container .imageUrl img {
+.containerMain .container-fluid img {
   -o-object-fit: cover;
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
 }
-main .container .card {
+.containerMain .container-fluid .card {
   border: none;
 }
-main .container .card .card-body {
+.containerMain .container-fluid .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
-main .container .card .card-body .btnPickItem {
+.containerMain .container-fluid .card .card-body .userChoice option {
+  background: black;
+}
+.containerMain .container-fluid .card .card-body .btnPickItem {
   border: white solid 1px;
   transition-duration: 1s;
   box-shadow: 0 0 2px 1px white;
 }
-main .container .card .card-body .btnPickItem[disabled] {
+.containerMain .container-fluid .card .card-body .btnPickItem[disabled] {
   border: transparent solid 1px;
   box-shadow: none;
 }
-main .container .card .card-body .userChoice option {
-  background: black;
-}
-main .container .card .card-body .choice {
+.containerMain .container-fluid .card .card-body .choice {
   display: none;
 }
-main .container .card .card-body label {
+.containerMain .container-fluid .card .card-body label {
   margin: 0;
 }
-main .container .choicePick {
+.containerMain .container-fluid .choicePick {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-main .container a {
+.containerMain .container-fluid a {
   text-decoration: none;
   padding: 2px 5px;
   border-radius: 15px;
   border: transparent 1px solid;
 }
-main .container a:hover {
+.containerMain .container-fluid a:hover {
   box-shadow: 0 0 5px 1px white;
 }
-main .container a i {
+.containerMain .container-fluid a i {
   margin-right: 8px;
 }
 
@@ -133,6 +122,9 @@ footer {
 }
 footer .containerFooter {
   padding-bottom: 20px;
+}
+footer .containerFooter h5 {
+  text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;

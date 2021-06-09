@@ -31,17 +31,11 @@ header {
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(3px);
 	backdrop-filter: blur(3px);
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-content: center;
-	flex-direction: row;
-	align-items: center;
-	padding: 10px 0;
+	
 
 	#logo {
-		width: 250px;
-		padding-left: 30px;
+		width: 230px;
+		
 	}
 
 	.btnBasket {
@@ -65,7 +59,7 @@ main {
 		margin-bottom: 40px;
 	}
 
-	.container {
+	.container-fluid {
 		padding-bottom: 20px;
 
 		img {
@@ -77,7 +71,7 @@ main {
 
 		.card {
 			border: none;
-			width: 25rem;
+			
 
 			.card-body {
 				-webkit-backdrop-filter: blur(3px);
@@ -116,6 +110,9 @@ footer {
 
 	.containerFooter {
 		padding-bottom: 20px;
+		h5{
+			text-decoration: underline;
+		}
 
 		.socialIcon {
 			ul {
@@ -137,7 +134,6 @@ footer {
 		}
 	}
 }
-
 
 
   

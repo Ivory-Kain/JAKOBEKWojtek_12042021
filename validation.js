@@ -1,14 +1,14 @@
 // Récupérartion de la réponse au format tableau dans le localStorage
 var customerOrder = JSON.parse(localStorage.getItem("orderId"));
-console.log(customerOrder);
+console.log("CO",customerOrder);
 
 // Récupérartion de l'Id de la commande
 var customerOrderId = customerOrder.orderId
-console.log(customerOrderId);
+console.log("COI",customerOrderId);
 
 // Récupération du prix total de mla commande
 var customerOrderTotal = customerOrder.contact.total
-console.log(customerOrderTotal);
+console.log("COT",customerOrderTotal);
 
 // // prix formater " prix en centimes moins 2 caractères, plus "." plus 2 caractères"
 var customerOrderTotalModified = customerOrderTotal.substring(0, customerOrderTotal.length - 2) + "." + customerOrderTotal.substring(customerOrderTotal.length - 2, customerOrderTotal.length) + ' €'

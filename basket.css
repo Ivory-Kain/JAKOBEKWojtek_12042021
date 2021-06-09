@@ -40,17 +40,9 @@ header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 0;
 }
 header #logo {
-  width: 250px;
-  padding-left: 30px;
+  width: 230px;
 }
 header .btnHome {
   color: white;
@@ -92,7 +84,7 @@ main .container {
 }
 main .container img {
   height: 100%;
-  width: 380px;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -143,18 +135,11 @@ main .btnValidForm:hover {
 }
 main .recap {
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  align-items: center;
 }
 main .recap .total {
   font-size: 30px;
-  display: flex;
-  justify-content: center;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
 }
 main .btnValidOrder {
   display: flex;
@@ -173,6 +158,9 @@ footer {
 }
 footer .containerFooter {
   padding-bottom: 20px;
+}
+footer .containerFooter h5 {
+  text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;

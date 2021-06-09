@@ -1,6 +1,7 @@
 // récupération des information du localStorage au format tableau
 var storageData = JSON.parse(localStorage.getItem("oricaddy"));
 
+
 // Variable "template = ID sample  "
 var template = document.getElementById("sample").content
 
@@ -49,8 +50,9 @@ if (storageData !== null && storageData.length) {
 		buttonDeletItem[i].addEventListener("click", function () {
 			storageData.splice(i, 1);
 			localStorage.setItem("oricaddy", JSON.stringify(storageData));
-			document.location.reload();
+			document.location.reload();			
 		})
+		console.log("logAfterDeletOneItem", storageData);
 
 		// bouton "vider votre panier" et rechargement de la page
 		var buttonDeletAllItem = document.querySelector(".removeAll")
@@ -58,16 +60,16 @@ if (storageData !== null && storageData.length) {
 			localStorage.removeItem("oricaddy")
 			document.location.reload();
 		})
+		console.log("logAfterDeletAllItems", storageData);
 	}
 }
 
 // si il n'y a pas de contenu dans storageData[i], non affichage du bouton "vider votre panier" et du formulaire + affichage "Votre panier est vide pour le moment."
 else {
-	document.querySelector(".removeAll").style.display = "none"
-	document.querySelector(".form").style.display = "none"
-	document.querySelector(".total").innerHTML = "Votre panier est vide pour le moment."
+	document.querySelector(".formContainer").style.display = "none"
+	document.querySelector(".recap").innerHTML = "Votre panier est vide pour le moment."
 	localStorage.removeItem("oricaddy")
-}
+	}
 
 // Validation et envoi du formulaire 
 document.querySelector('form').addEventListener("submit", function (e) {
@@ -87,7 +89,9 @@ document.querySelector('form').addEventListener("submit", function (e) {
 			},
 			"products": products,
 		};
+
 	}
+
 
 	// Envoi de la commande au serveur 
 	fetch('http://localhost:3000/api/cameras/order', {
@@ -97,7 +101,6 @@ document.querySelector('form').addEventListener("submit", function (e) {
 			},
 			body: JSON.stringify(userData)
 		})
-
 		// Récupération de la réponse de l'API
 		.then(function (response) {
 			return response.json();

@@ -47,30 +47,23 @@ header {
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(3px);
 	backdrop-filter: blur(3px);
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-content: center;
-	flex-direction: row;
-	align-items: center;
-	padding: 10px 0;
 
 	#logo {
-		width: 250px;
-		padding-left: 30px;
+		width: 230px;
 	}
 
-	.btnHome{
-        
-        color: white;
-        text-decoration: none;
-        &:hover {
-            box-shadow: 0 0 10px 1px white;
-            color: white;
-            text-decoration: none;
-            border: white;
-        }
-    }
+	.btnHome {
+
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			box-shadow: 0 0 10px 1px white;
+			color: white;
+			text-decoration: none;
+			border: white;
+		}
+	}
 }
 
 input:-webkit-autofill,
@@ -90,10 +83,10 @@ select:-webkit-autofill:focus {
 	transition: background-color 5000s ease-in-out 0s;
 }
 
-main {	
+main {
 	display: flex;
-	flex-direction: column;	
-	align-items: center;	
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	z-index: 500;
 	padding: 50px;
@@ -103,7 +96,7 @@ main {
 
 		img {
 			height: 100%;
-			width: 380px;
+			width: 100%;
 			-o-object-fit: cover;
 			object-fit: cover;
 		}
@@ -143,7 +136,7 @@ main {
 	}
 
 	.formContainer {
-	
+
 		width: 100%;
 		background-color: transparent;
 		-webkit-backdrop-filter: blur(3px);
@@ -168,19 +161,12 @@ main {
 	}
 
 	.recap {
-		width: 100%;
-		display: flex;
-		justify-content: space-evenly;
+		width: 100%;		
 		-webkit-backdrop-filter: blur(3px);
-		backdrop-filter: blur(3px);
-		align-items: center;
+		backdrop-filter: blur(3px);	
 
 		.total {
 			font-size: 30px;
-			display: flex;
-			justify-content: center;
-			 -webkit-backdrop-filter: blur(3px);
-			backdrop-filter: blur(3px);
 		}
 	}
 
@@ -203,6 +189,10 @@ footer {
 
 	.containerFooter {
 		padding-bottom: 20px;
+
+		h5 {
+			text-decoration: underline;
+		}
 
 		.socialIcon {
 			ul {

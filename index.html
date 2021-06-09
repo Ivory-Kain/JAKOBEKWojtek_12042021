@@ -22,143 +22,149 @@
 
   <body>
     <div class="backgroundImage"></div>
-    <header>
+    <header class="d-flex align-items-center justify-content-around">
       <div class="logo">
         <img src="./images/logo.webp" alt="logo" id="logo" />
       </div>
-      <nav>
+      <nav class="mr-4 col-4">
         <button
-          class="btn btnBasket btn-lg rounded-pill"
+          class="btn btnBasket btn-lg rounded-pill d-flex align-items-center"
           onclick="window.location.href = './basket.html';"
         >
           Panier
-          <span class="badge badge-light"></span>
+          <span class="badge badge-light ml-2"></span>
         </button>
       </nav>
     </header>
 
-    <main>
+    <main class="p-0">
       <div id="product">
         <h1 class="text-white text-center h-100">Nos Caméras Vintage</h1>
 
-        <section id="contentContainer" class="row row-cols-2"></section>
+        <section id="contentContainer" class="d-flex flex-column"></section>
       </div>
     </main>
     <footer>
       <div class="containerFooter col-10">
         <div class="containerFooterTop row">
-          <div class="about col-md-3">
-            <h5 class="text-white"><u>Mieux nous connaitre</u></h5>
-            <ul class="list-unstyled">
-              <li>
+          <div class="about col-md-3 d-flex flex-column justify-content-around">
+            <h5 class="text-white mx-auto">Mieux nous connaitre</h5>
+            <ul class="list-unstyled mx-auto">
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light">A propos</a>
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light">Recrutement</a>
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Nos Magasins</a
                 >
               </li>
             </ul>
           </div>
-          <div class="payment col-md-3">
-            <h5 class="text-white"><u>Moyens de paiement</u></h5>
+          <div
+            class="payment col-md-3 d-flex flex-column justify-content-around"
+          >
+            <h5 class="text-white mx-auto">Moyens de paiement</h5>
             <ul class="list-unstyled">
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Carte de paiement</a
                 >
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light">Paypal</a>
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Carte-cadeaux</a
                 >
               </li>
             </ul>
           </div>
-          <div class="help col-md-3">
-            <h5 class="text-white"><u>Besoin d'aide ?</u></h5>
-            <ul class="list-unstyled">
-              <li>
+          <div class="help col-md-3 d-flex flex-column justify-content-around">
+            <h5 class="text-white mx-auto">Besoin d'aide ?</h5>
+            <ul class="list-unstyled mx-auto">
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Service Client</a
                 >
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Professionnels</a
                 >
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white font-weight-light"
                   >Contact Publicité</a
                 >
               </li>
             </ul>
           </div>
-          <div class="info col-md-3">
-            <h5 class="text-white"><u>Information légales</u></h5>
+          <div class="info col-md-3 d-flex flex-column justify-content-around">
+            <h5 class="text-white mx-auto">Information légales</h5>
             <ul class="list-unstyled">
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white">Conditions générales de vente</a>
               </li>
-              <li>
+              <li class="mx-auto d-flex justify-content-around">
                 <a href="#" class="text-white"
                   >Conditions générales d'utilisation
                 </a>
               </li>
-              <li><a href="#" class="text-white">Mentions Légales </a></li>
+              <li class="mx-auto d-flex justify-content-around">
+                <a href="#" class="text-white">Mentions Légales </a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="containerFooterBottom row">
-          <div class="col-md-3">
+          <div class="col-md-3 mx-auto">
             <div class="socialIcon">
-              <ul class="row justify-content-around list-unstyledb,">
+              <ul class="row justify-content-around list-unstyledb p-0">
                 <li>
                   <a href="#" class="text-white"
-                    ><i class="bi bi-facebook"></i
+                    ><i class="fab fa-facebook fa-lg"></i
                   ></a>
                 </li>
                 <li>
                   <a href="#" class="text-white"
-                    ><i class="bi bi-google"></i
+                    ><i class="fab fa-google fa-lg"></i
                   ></a>
                 </li>
                 <li>
                   <a href="#" class="text-white"
-                    ><i class="bi bi-linkedin"></i
+                    ><i class="fab fa-linkedin fa-lg"></i
                   ></a>
                 </li>
                 <li>
                   <a href="#" class="text-white"
-                    ><i class="bi bi-twitter"></i
+                    ><i class="fab fa-twitter fa-lg"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="#" class="text-white"><i class="bi bi-rss"></i></a>
+                  <a href="#" class="text-white"
+                    ><i class="fas fa-rss-square fa-lg"></i
+                  ></a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="copyright-part text-center text-white">
+          <div class="col-md-6 mx-auto">
+            <div class="copyright-part text-center text-white mb-4">
               @ 2021 All Rights Reserved Orinoco
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 mx-auto">
             <div class="paymentIcon text-right">
               <ul class="row justify-content-around list-unstyled">
-                <li><i class="fab fa-cc-paypal text-white"></i></li>
-                <li><i class="fab fa-cc-visa text-white"></i></li>
+                <li><i class="fab fa-cc-paypal text-white fa-lg"></i></li>
+                <li><i class="fab fa-cc-visa text-white fa-lg"></i></li>
 
-                <li><i class="fab fa-cc-mastercard text-white"></i></li>
-                <li><i class="fas fa-gift text-white"></i></li>
+                <li><i class="fab fa-cc-mastercard text-white fa-lg"></i></li>
+                <li><i class="fas fa-gift text-white fa-lg"></i></li>
               </ul>
             </div>
           </div>
@@ -169,7 +175,7 @@
     <!-- Le template produit -->
 
     <template id="sample">
-      <div class="container col g-6">
+      <div class="container-fluid p-0">
         <div class="card bg-transparent text-white imageUrl mx-auto">
           <img src="" class="card-img-top img-fluid" alt="vcam" />
           <div class="card-body name">

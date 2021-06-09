@@ -34,17 +34,9 @@ header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 0;
 }
 header #logo {
-  width: 250px;
-  padding-left: 30px;
+  width: 230px;
 }
 header .btnHome {
   color: white;
@@ -88,6 +80,9 @@ footer {
 }
 footer .containerFooter {
   padding-bottom: 20px;
+}
+footer .containerFooter h5 {
+  text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;

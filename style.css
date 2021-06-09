@@ -27,17 +27,9 @@ header {
   background-color: transparent;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 0;
 }
 header #logo {
-  width: 250px;
-  padding-left: 30px;
+  width: 230px;
 }
 header .btnBasket {
   color: white;
@@ -58,34 +50,33 @@ main {
 main h1 {
   margin-bottom: 40px;
 }
-main .container {
+main .container-fluid {
   padding-bottom: 20px;
 }
-main .container img {
+main .container-fluid img {
   height: 265px;
   width: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
-main .container .card {
+main .container-fluid .card {
   border: none;
-  width: 25rem;
 }
-main .container .card .card-body {
+main .container-fluid .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
-main .container a {
+main .container-fluid a {
   text-decoration: none;
   padding: 2px 5px;
   border-radius: 15px;
   border: transparent 1px solid;
 }
-main .container a:hover {
+main .container-fluid a:hover {
   box-shadow: 0 0 5px 1px white;
 }
-main .container a i {
+main .container-fluid a i {
   margin-right: 8px;
 }
 
@@ -101,6 +92,9 @@ footer {
 }
 footer .containerFooter {
   padding-bottom: 20px;
+}
+footer .containerFooter h5 {
+  text-decoration: underline;
 }
 footer .containerFooter .socialIcon ul li {
   display: inline-block;
