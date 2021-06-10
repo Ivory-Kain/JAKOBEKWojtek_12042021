@@ -18,14 +18,10 @@ body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]) {
 	footer {
 		background-color: rgba(0, 0, 0, 0.6);
 	}
-
 }
 
 body {
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 .backgroundImage {
@@ -53,7 +49,6 @@ header {
 	}
 
 	.btnHome {
-
 		color: white;
 		text-decoration: none;
 
@@ -84,16 +79,11 @@ select:-webkit-autofill:focus {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	position: relative;
 	z-index: 500;
 	padding: 50px;
 
 	.container {
-		padding-bottom: 20px;
-
 		img {
 			height: 350px;
 			width: 100%;
@@ -136,7 +126,6 @@ main {
 	}
 
 	.formContainer {
-
 		width: 100%;
 		background-color: transparent;
 		-webkit-backdrop-filter: blur(3px);
@@ -168,11 +157,6 @@ main {
 		.total {
 			font-size: 30px;
 		}
-	}
-
-	.btnValidOrder {
-		display: flex;
-		justify-content: space-evenly;
 	}
 }
 

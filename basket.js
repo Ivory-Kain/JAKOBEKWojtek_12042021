@@ -50,7 +50,7 @@ if (storageData !== null && storageData.length) {
 		buttonDeletItem[i].addEventListener("click", function () {
 			storageData.splice(i, 1);
 			localStorage.setItem("oricaddy", JSON.stringify(storageData));
-			document.location.reload();			
+			document.location.reload();
 		})
 		console.log("logAfterDeletOneItem", storageData);
 
@@ -69,7 +69,7 @@ else {
 	document.querySelector(".formContainer").style.display = "none"
 	document.querySelector(".recap").innerHTML = "Votre panier est vide pour le moment."
 	localStorage.removeItem("oricaddy")
-	}
+}
 
 // Validation et envoi du formulaire 
 document.querySelector('form').addEventListener("submit", function (e) {
