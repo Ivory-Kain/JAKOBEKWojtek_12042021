@@ -1,19 +1,15 @@
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) header {
   background-color: rgba(0, 0, 0, 0.6);
 }
-body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .thanksToCustomer {
-  background-color: rgba(0, 0, 0, 0.6);
+body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .card-body {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-body {
-  min-height: 100vh;
-}
-
 .backgroundImage {
-  background-image: url("./images/backgroundImage.webp");
+  background-image: url("../images/backgroundImage.webp");
   background-size: cover;
   background-position: center;
   -o-object-fit: contain;
@@ -35,11 +31,11 @@ header {
 header #logo {
   width: 230px;
 }
-header .btnHome {
+header .btnBasket {
   color: white;
   text-decoration: none;
 }
-header .btnHome:hover {
+header .btnBasket:hover {
   box-shadow: 0 0 10px 1px white;
   color: white;
   text-decoration: none;
@@ -51,9 +47,37 @@ main {
   z-index: 500;
   padding: 50px;
 }
-main .thanksToCustomer {
+main h1 {
+  margin-bottom: 40px;
+}
+main .container {
+  padding-bottom: 20px;
+}
+main .container img {
+  height: 265px;
+  width: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+main .container .card {
+  border: none;
+}
+main .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  text-shadow: #323232 1px 0 10px;
+}
+main .container a {
+  text-decoration: none;
+  padding: 2px 5px;
+  border-radius: 15px;
+  border: transparent 1px solid;
+}
+main .container a:hover {
+  box-shadow: 0 0 5px 1px white;
+}
+main .container a i {
+  margin-right: 8px;
 }
 
 footer {
@@ -76,4 +100,4 @@ footer .containerFooter .socialIcon ul li:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}/*# sourceMappingURL=validation.css.map */
+}/*# sourceMappingURL=style.css.map */

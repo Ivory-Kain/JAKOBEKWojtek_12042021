@@ -4,22 +4,12 @@ body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) header {
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .card-body {
   background-color: rgba(0, 0, 0, 0.4);
 }
-body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .formContainer {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) .recap {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 body[data-agent*=Mozilla]:not(body[data-agent*=Chrome]) footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-body {
-  min-height: 100vh;
-}
-
 .backgroundImage {
-  background-image: url("./images/backgroundImage.webp");
+  background-image: url("../images/backgroundImage.webp");
   background-size: cover;
   background-position: center;
   -o-object-fit: contain;
@@ -51,86 +41,68 @@ header .btnHome:hover {
   text-decoration: none;
   border: white;
 }
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid white;
-  -webkit-text-fill-color: white;
-  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
+header .btnBasket {
+  color: white;
+  text-decoration: none;
+}
+header .btnBasket:hover {
+  box-shadow: 0 0 10px 1px white;
+  color: white;
+  text-decoration: none;
+  border: white;
 }
 
-main {
+.containerMain {
   position: relative;
   z-index: 500;
   padding: 50px;
 }
-main .container img {
-  height: 350px;
-  width: 100%;
+.containerMain .container {
+  padding: 0;
+}
+.containerMain .container img {
   -o-object-fit: cover;
   object-fit: cover;
+  height: 300px;
+  width: 100%;
 }
-main .container .card {
+.containerMain .container .card {
   border: none;
 }
-main .container .card .card-body {
+.containerMain .container .card .card-body {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   text-shadow: #323232 1px 0 10px;
 }
-main .container .card .card-body .remove {
-  border: solid 1px white;
+.containerMain .container .card .card-body .userChoice option {
+  background: black;
 }
-main .container .card .card-body .remove:hover {
-  box-shadow: 0 0 5px 1px white;
+.containerMain .container .card .card-body .btnPickItem {
+  border: white solid 1px;
+  transition-duration: 1s;
+  box-shadow: 0 0 2px 1px white;
 }
-main .container a {
+.containerMain .container .card .card-body .btnPickItem[disabled] {
+  border: transparent solid 1px;
+  box-shadow: none;
+}
+.containerMain .container .card .card-body .choice {
+  display: none;
+}
+.containerMain .container .card .card-body label {
+  margin: 0;
+}
+.containerMain .container a {
   text-decoration: none;
   padding: 2px 5px;
   border-radius: 15px;
   border: transparent 1px solid;
 }
-main .container a:hover {
+.containerMain .container a:hover {
   box-shadow: 0 0 5px 1px white;
 }
-main .container a i {
+.containerMain .container a i {
   margin-right: 8px;
-}
-main .formContainer {
-  width: 100%;
-  background-color: transparent;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-}
-main .removeAll {
-  border: solid 1px white;
-}
-main .removeAll:hover {
-  box-shadow: 0 0 5px 1px white;
-}
-main .btnValidForm {
-  margin-top: 30px;
-  border: solid 1px white;
-}
-main .btnValidForm:hover {
-  box-shadow: 0 0 5px 1px white;
-}
-main .recap {
-  width: 100%;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-}
-main .recap .total {
-  font-size: 30px;
 }
 
 footer {
@@ -156,4 +128,4 @@ footer .containerFooter .socialIcon ul li:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}/*# sourceMappingURL=basket.css.map */
+}/*# sourceMappingURL=product.css.map */

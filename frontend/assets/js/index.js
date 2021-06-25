@@ -21,7 +21,7 @@ fetch("http://localhost:3000/api/cameras").then(function (res) {
 			// querySelector "remplissage de la cible par le résultat donné data[i]"
 			copyHTML.querySelector(".name h2").textContent = data[i].name;
 			copyHTML.querySelector(".imageUrl img").src = data[i].imageUrl;
-			copyHTML.querySelector(".product").setAttribute("href", "product.html?id=" + data[i]._id);
+			copyHTML.querySelector(".product").setAttribute("href", "./frontend/pages/product.html?id=" + data[i]._id);
 
 			// prix formater " prix en centimes moins 2 caractères, plus "." plus 2 caractères"
 			copyHTML.querySelector(".price span").textContent = modifiedPrice.substring(0, modifiedPrice.length - 2) + "." + modifiedPrice.substring(modifiedPrice.length - 2, modifiedPrice.length) + ' €'

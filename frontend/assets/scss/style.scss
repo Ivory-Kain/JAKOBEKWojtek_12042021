@@ -13,7 +13,7 @@ body[data-agent*="Mozilla"]:not(body[data-agent*="Chrome"]) {
 }
 
 .backgroundImage {
-	background-image: url("./images/backgroundImage.webp");
+	background-image: url("../images/backgroundImage.webp");
 	background-size: cover;
 	background-position: center;
 	-o-object-fit: contain;
